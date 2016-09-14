@@ -1,27 +1,58 @@
-.greating {
-  overflow: hidden;
-  position: relative;
-  padding: 150px 20px 50px;
-  background: #F44336;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+@import 'mixins';
 
-  &_text {
-    font: 45px 'Arial', sans-serif;
-    color: #fff;
-  }
+.bg {
+  width: 100%;
+  height: 100vh;
 
-  &_picture {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    height: 114px;
-    background: url('/assets/img/viking.png') no-repeat center;
-    transform: translate3D(100%, 0, 0);
-    transition: transform 0.5s;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+}
+
+.header {
+  width: 80%;
+  height: 300px;
+
+  background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
+
+  margin: auto;
+
+  @include box;
+  
+  &__menu {
+    
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to top, rgba(124,8,20,1), rgba(188,20,37,1));
+
+    box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.18);
+    border-radius: 10px;
+    
+    &-wrapper {
+      width: 80%;
+      height: 80px;
+
+      margin: auto;
+
+      border-radius: 10px;
+      box-shadow: 3px 10px 10px 10px rgba(31,2,2,1);
+    }
+    
+    &-item {
+      display: inline-block;
+      width: 15%;
+
+      line-height: 80px;
+
+      border-right:1px solid rgba(182,35,60,1); 
+    }
+
+    &-link {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+
+    }
   }
 }
 
-.greating_picture.m--show {
-  transform: translate3D(0, 0, 0);
-}
