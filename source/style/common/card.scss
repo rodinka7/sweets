@@ -1,0 +1,22 @@
+.card {
+	width: 230px;
+	height: 350px;
+
+	box-shadow: 1px 2px 2px 2px #989696;
+	background: #fff;
+	border-radius: 25px;
+
+	position: relative;
+
+	&__pic {
+		position: absolute;
+		top: 5%;
+
+		width: 100%;
+
+		&-img {
+			display: block;
+			margin:auto;
+		}
+	}
+}

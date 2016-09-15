@@ -1,6 +1,13 @@
 .wrapper
 	.bg
 		header.header
+			ul.header__top-menu
+				li.header__top-menu-item
+					a.header__top-menu-link(href="#") Оплата
+				li.header__top-menu-item
+					a.header__top-menu-link(href="#") Доставка
+			.header__logo
+				img.header__logo-img(src="assets/img/logo.png")
 			.header__menu-wrapper
 				.header__menu
 					ul.header__menu-list
@@ -14,4 +21,15 @@
 							a.header__menu-link(href="#") О нас
 						li.header__menu-item
 							a.header__menu-link(href="#") Контакты
+						li.header__menu-item
+							input.header__search(type="text" onclick="this.style.color='#fff';")
+			.header__run
+				marquee.header__run-line(behavior="alternite" direction="left") Лучшие сладкие новогодние подарки по низким ценам
+		block slider
+			include _slider
+		block content
+			include _content
+		block footer
+			include _footer
+
 

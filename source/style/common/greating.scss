@@ -2,8 +2,7 @@
 
 .bg {
   width: 100%;
-  height: 100vh;
-
+  
   background: url(../img/bg.jpg);
   background-size: cover;
 }
@@ -13,11 +12,60 @@
   height: 300px;
 
   background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
-
+  border: 1px solid rgba(0,0,0,0);
   margin: auto;
 
   @include box;
   
+  &__logo {
+    margin-top: 30px;
+  }
+  &__top-menu {
+    float: right;
+    margin-right: 100px;
+
+    height: 20px;
+    
+    &-item {
+       font: 10px Georgia, Arial, sans-serif;
+
+       display: inline-block;
+
+       position: relative;
+
+       @include box;
+       margin-left: 35px;
+       padding: 0;
+
+       &:hover .header__top-menu-link {
+        color: #35230f; 
+       }
+
+       &:first-child {
+        margin-left: 0;
+       } 
+
+       &:before {
+        content: '';
+        
+        width: 3px;
+        height: 3px;
+        border: 1px solid #35230f;
+        background: #35230f;
+        
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        margin-top: -3px;
+       }
+    }
+    &-link {
+      text-transform: uppercase;
+      text-decoration: none;
+
+      color: rgba(222,27,42,1);
+    }
+  }
   &__menu {
     
     width: 100%;
@@ -38,20 +86,57 @@
       box-shadow: 3px 10px 10px 10px rgba(31,2,2,1);
     }
     
+    
     &-item {
       display: inline-block;
-      width: 15%;
-
-      line-height: 80px;
+      width: 12%;
 
       border-right:1px solid rgba(182,35,60,1); 
+
+      text-align:center;
+
+      font: 12px/80px Georgia, Arial, sans-serif;
+
+      cursor: pointer;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover .header__menu-link {
+         color: rgba(68,7,22,1);
+      }
+
     }
 
     &-link {
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
+    }
+  }
+  &__search {
+      @include box;
 
+      width: 210px;
+      height: 40px;
+      margin: 0 30px;
+      padding: 0 10px;
+
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #35230f, #62050f);
+      outline: none;
+      border: none;   
+  }
+
+  &__run {
+
+    margin-top: 30px;
+
+    &-line {
+      
+      color: #fff;
+      font: 20px Georgia, Arial, sans-serif;
     }
   }
 }

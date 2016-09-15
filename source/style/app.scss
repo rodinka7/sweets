@@ -2,4 +2,13 @@ body {
   margin: 0;
 }
 
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
 @import 'common/greating';
+@import 'common/slider';
+@import 'common/content';
+@import 'common/footer';
+@import 'common/card';
