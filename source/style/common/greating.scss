@@ -9,7 +9,7 @@
 
 .header {
   width: 80%;
-  height: 300px;
+  height: 280px;
 
   background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
   border: 1px solid rgba(0,0,0,0);
@@ -20,12 +20,40 @@
   &__logo {
     margin-top: 30px;
   }
-  &__top-menu {
+  &__top {
+    width: 70%;
     float: right;
-    margin-right: 100px;
+  }
 
-    height: 20px;
+  /* Социальные иконки */
+  &__socials {
+    display: inline-block;
+
+    &-item {
+      display: inline-block;
+
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover .header__socials-link {
+        color: rgba(222,27,42,1);
+      }
+    }
     
+    &-link {
+      color: #fff;
+      font-size: 18px;
+
+    }
+  }
+  /* Социальные иконки */
+  &__top-menu {
+    display: inline-block;
+
+    margin-left: 100px;
     &-item {
        font: 10px Georgia, Arial, sans-serif;
 

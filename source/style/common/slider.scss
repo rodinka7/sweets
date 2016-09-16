@@ -4,4 +4,43 @@
 
 	background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
 	margin: auto;
+	
+	position: relative;
+
+	overflow: hidden;
+	
+	&__img {
+
+		display: inline-block;
+		position: relative;
+		
+		margin-left: 20px;
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+
+		&-list {
+			list-style: none;
+		}
+
+		&-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			opacity: 0;
+		}
+	}
+	&__text {
+		display: inline-block;
+
+		position: absolute;
+		top: 30%;
+		right: -100%;
+
+		transition: .9s;
+	}
 }
+/*&.active {
+     opacity: 1;
+}*/

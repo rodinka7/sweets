@@ -1,11 +1,27 @@
 .wrapper
 	.bg
 		header.header
-			ul.header__top-menu
-				li.header__top-menu-item
-					a.header__top-menu-link(href="#") Оплата
-				li.header__top-menu-item
-					a.header__top-menu-link(href="#") Доставка
+			section.header__top
+				nav.header__socials
+					ul.header__socials-list
+						li.header__socials-item
+							a.header__socials-link(href="#")
+								i(class="fa fa-vk" aria-hidden="true")
+						li.header__socials-item
+							a.header__socials-link(href="#")
+								i(class="fa fa-odnoklassniki" aria-hidden="true")
+						li.header__socials-item
+							a.header__socials-link(href="#")
+								i(class="fa fa-facebook" aria-hidden="true")
+				ul.header__top-menu
+					li.header__top-menu-item
+						a.header__top-menu-link(href="#") Оплата
+					li.header__top-menu-item
+						a.header__top-menu-link(href="#") Доставка
+					li.header__top-menu-item
+						a.header__top-menu-link(href="#") Договор
+					li.header__top-menu-item
+						a.header__top-menu-link(href="#") Наш ассортимент
 			.header__logo
 				img.header__logo-img(src="assets/img/logo.png")
 			.header__menu-wrapper
