@@ -1,0 +1,50 @@
+.menu__card {
+	width: 80%;
+	margin: auto;
+}
+.card {
+	&_catalog {
+		width: 90%;
+		margin: 10px auto;
+
+		@include box;
+		padding: 10px;
+
+		box-shadow: 1px 2px 2px 2px #989696;
+		background: #fff;
+		border-radius: 10px;
+
+		display: flex;
+	}
+	&__text_catalog {
+		font: 12px/24px Georgia, sans-serif;
+		color: rgba(68,7,22,1);
+	}
+	&__pic_catalog {
+		flex: 0 1 auto;
+
+		display: flex;
+		flex-flow: column;
+
+		justify-content: center;
+		margin-right: 20px;
+	}
+	&__info_catalog {
+		flex: 1 5 auto;
+
+		margin-right: 20px;
+	}
+	&__price_catalog {
+		flex: 1 1 auto;
+
+		display: flex;
+		flex-flow: column wrap;
+
+		justify-content: center;
+		align-items: center;
+	}
+	&__art_catalog {
+		font: 12px/16px Georgia, sans-serif;
+		margin-bottom: 10px;
+	}
+}

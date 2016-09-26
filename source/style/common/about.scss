@@ -1,0 +1,72 @@
+.main__up {
+	width: 90%;
+	margin: 30px auto 0px;
+	padding: 5px;
+
+	border-radius: 10px;
+	border: 1px solid #5b564d;
+	box-shadow: 1px 1px 1px 1px #5b564d;
+	background: #b7ad98;
+
+	&-link {
+		text-decoration: none;
+		color: rgba(68,7,22,1);
+
+		line-height: 1.5;
+
+		margin: 0 10px;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+	span {
+		font-weight: bold;
+	}
+}
+.card_about {
+	width: 90%;
+	margin: 0 auto 20px;
+
+	@include box;
+	padding: 10px;
+
+	box-shadow: 1px 2px 2px 2px #989696;
+	background: #fff;
+	border-radius: 10px;
+
+	&__header {
+		font: 16px/24px Georgia;
+		color: rgba(68,7,22,1);
+
+		margin: 10px 0 20px;
+	}
+
+	&__text {
+		font: 12px/20px Georgia;
+		color: rgba(68,7,22,0.7);
+
+		margin-bottom: 15px;
+	}
+
+	&__item {
+		font: 14px/24px Georgia;
+		color: rgba(68,7,22,1);
+		font-weight: bold;
+	}
+
+	&__link {
+		text-decoration: none;
+		font: 14px/24px Georgia;
+		font-weight: bold;
+		color: rgba(68,7,22,1);
+
+		float: right;
+		margin-right: 15px;
+
+		&:hover {
+			color: #c5081e;
+		}
+	}
+
+}

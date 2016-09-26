@@ -1,51 +1,10 @@
 .wrapper
 	.bg
-		header.header
-			section.header__top
-				nav.header__socials
-					ul.header__socials-list
-						li.header__socials-item
-							a.header__socials-link(href="#")
-								i(class="fa fa-vk" aria-hidden="true")
-						li.header__socials-item
-							a.header__socials-link(href="#")
-								i(class="fa fa-odnoklassniki" aria-hidden="true")
-						li.header__socials-item
-							a.header__socials-link(href="#")
-								i(class="fa fa-facebook" aria-hidden="true")
-				ul.header__top-menu
-					li.header__top-menu-item
-						a.header__top-menu-link(href="#") Оплата
-					li.header__top-menu-item
-						a.header__top-menu-link(href="#") Доставка
-					li.header__top-menu-item
-						a.header__top-menu-link(href="#") Договор
-					li.header__top-menu-item
-						a.header__top-menu-link(href="#") Наш ассортимент
-			.header__logo
-				img.header__logo-img(src="assets/img/logo.png")
-			.header__menu-wrapper
-				.header__menu
-					ul.header__menu-list
-						li.header__menu-item
-							a.header__menu-link(href="#") Главная
-						li.header__menu-item
-							a.header__menu-link(href="#") Каталог
-						li.header__menu-item
-							a.header__menu-link(href="#") Прайс
-						li.header__menu-item
-							a.header__menu-link(href="#") О нас
-						li.header__menu-item
-							a.header__menu-link(href="#") Контакты
-						li.header__menu-item
-							input.header__search(type="text" onclick="this.style.color='#fff';")
-			.header__run
-				marquee.header__run-line(behavior="alternite" direction="left") Лучшие сладкие новогодние подарки по низким ценам
+		block header
+			include _header
 		block slider
 			include _slider
 		block content
 			include _content
 		block footer
 			include _footer
-
-
