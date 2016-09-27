@@ -9,22 +9,13 @@
 
 .header {
   width: 80%;
-  height: 280px;
+  height: 270px;
 
   background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
   border: 1px solid rgba(0,0,0,0);
   margin: auto;
 
   @include box;
-  
-  &__logo {
-    margin-top: 30px;
-
-    &-bg {
-      position: absolute;
-      z-index: 0.5;
-    }
-  }
   &__top {
     width: 70%;
     float: right;
@@ -99,6 +90,23 @@
       color: rgba(222,27,42,1);
     }
   }
+  &__text {
+    position: absolute;
+    
+    margin: -70px 0 0 200px;
+    
+    text-transform: uppercase;
+    color: #e0dfdc;
+    font: 13px/24px Georgia;
+    
+    text-shadow: 0 3px #2e2e2e,
+                 0 4px #2a2a2a,
+                 0 5px 0 #262626;
+
+    span {
+      font-size: 56px;
+    }
+  }
   &__menu {
     
     width: 100%;
@@ -113,7 +121,7 @@
       width: 80%;
       height: 80px;
 
-      margin: auto;
+      margin: -20px auto 0;
 
       border-radius: 10px;
       box-shadow: 3px 10px 10px 10px rgba(31,2,2,1);
@@ -164,7 +172,7 @@
 
   &__run {
 
-    margin-top: 30px;
+    margin-top: 20px;
 
     &-line {
       

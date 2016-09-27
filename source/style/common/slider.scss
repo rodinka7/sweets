@@ -14,9 +14,10 @@
 		display: inline-block;
 		position: relative;
 		
-		margin-left: 20px;
-		width: 50%;
-		height: 100%;
+		margin: 20px 0 0 20px;
+		width: 600px;
+		height: 530px;
+
 		overflow: hidden;
 
 		&-list {
@@ -41,6 +42,6 @@
 		transition: .9s;
 	}
 }
-/*&.active {
+&.active {
      opacity: 1;
-}*/
+}

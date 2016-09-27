@@ -9,38 +9,100 @@ module.exports = function() {
 			img = $('.slider__text');
 
 		if (top > 200) {
-			img.css('right', '10%');
+			img.css('right', '1%');
 		}
 	});
 
 	/* SLIDER */
-	(function() {
-
+	var slider = (function() {
+		
 		var flag = true,
 			timer = 0,
-			timerDuration = 2000;
+			timerDuration = 4000;
 
-		$('.slider__img').on('click', function() {
+		return {
+			init: function() {
 
-			var slides = $('.slider__img-item'),
-				active = slides.filter('.active'),
-				next = active.next(),
-				first = slides.first(),
-				duration = 1000;
+				var _this = this;
 
-			active.removeClass('active').fadeOut(duration, function() {
+				/* Включаем автопереключение */
+				_this.autoSwitch();
+
+			},
+
+			moveSlide: function(slide) {
+
+				var 
+					container = slide.closest('.slider'),
+					slides = container.find('.slider__img-item'),
+					activeSlide = slides.filter('.active'),
+					slideWidth = slides.width(),
+					duration = 1000,
+					reqPos = 0,
+					reqSlideStrafe = 0;
 				
-				next.addClass('inslide');
-			});
+				if (flag) {
 
-			if (next.length === '') {
-				first.fadeIn(100).addClass('active');
-			} else {
+					flag = false;
+					
+					slide.css('left', reqPos).addClass('inslide');
 
-				next.fadeIn(100).toggleClass('inslide active');
+					var movableSlide = slides.filter('.inslide');
+
+					activeSlide.animate({
+						left: reqSlideStrafe,
+						opacity: 0
+					}, duration);
+					movableSlide.animate({
+						left: 0,
+						opacity: 1
+					}, duration, function() {
+						
+						var $this = $(this);
+						slides.css({'left': '0'}).removeClass('active');
+						$this.toggleClass('inslide active');
+						flag = true;
+					});
+				}
+				
+			},
+
+			autoSwitch: function() {
+				
+				var _this = this;
+
+				timer = setInterval(function() {
+					
+					var
+						slides = $('.slider__img-item'),
+						activeSlide = slides.filter('.active'),
+						nextSlide = activeSlide.next(),
+						firstSlide = slides.first();
+
+					if (nextSlide.length) {
+						_this.moveSlide(nextSlide);
+					} else {
+						_this.moveSlide(firstSlide);
+					}
+
+				}, timerDuration);
+			},
+
+			clearTimer: function() {
+				if (timer) {
+					clearInterval(timer);
+					this.autoSwitch();
+				}
 			}
-		});
+		}
+
 	})();
+
+	$(document).ready(function() {
+		if ($('.slider').length) {
+			slider.init();
+		}
+	})
 	/* SLIDER */
 
 };

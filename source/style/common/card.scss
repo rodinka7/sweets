@@ -70,19 +70,32 @@
 		&-1 {
 			cursor: pointer;
 			background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
-			color: #fff;
 
 			outline: none;
 			border: 1px solid rgba(182,35,60,1);
 			border-radius: 5px;
-
-			font: 12px Georgia, Arial, sans-serif;
 			
 			width: 100px;
 			height: 30px;
 
-			&:hover {
+			&:hover .card__btn-1-link{
 				color: rgba(40,3,7,1);
+			}
+
+			&-link {
+				display: block;
+				width: 100%;
+				height: 100%;
+				
+				@include box;
+				padding-top: 8px;
+				
+				color: #fff;
+				font: 11px Georgia, Arial, sans-serif;
+
+				text-decoration: none;
+				text-transform: uppercase;
+				text-align: center;
 			}
 		}
 	}
