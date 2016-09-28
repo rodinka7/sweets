@@ -3,7 +3,9 @@
 
   var
   		slideText = require('./slideText'),
-  		map = require('./map');
+  		map = require('./map'),
+      card_menu = require('./card_menu'),
+      manu = require('./menu'); 
 
 
   function isCurrent(page) {
@@ -16,5 +18,8 @@
   
   slideText();
 
+  card_menu();
+  
+  manu();
   
 })();

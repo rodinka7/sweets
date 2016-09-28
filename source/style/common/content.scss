@@ -71,16 +71,39 @@
 
 .main {
 	float: right;
-	width: 75%; 
+	width: 75%;
+	height: 1500px;
+
+	position: relative;
+
 	&__header {
 		margin: 30px 0 0 35px;
 	}
 	&__container {
+
+		position: absolute;
+		top: 150px;
+		left: 0;
+
 		width:100%;
 
 		display: flex;
 
 		flex-flow: row wrap;
 		justify-content: center;
+
+		visibility: hidden;
 	}
 }
+
+/* Переключение вкладок */
+.activeSection{
+  visibility: visible;
+}
+.activeItem{
+   transform: translate(15px, 0);
+}
+.activeLink{
+  color: rgba(222,27,42,1); 
+}
+/* Переключение вкладок */

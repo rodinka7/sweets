@@ -1,53 +1,9 @@
 .content.clearfix
 	.sidebar
-		.menu
-			.menu__categories
-				img.menu__categories-img(src="assets/img/categories.png")
-			ul.menu__list
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 1
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 2
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 3
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 4
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 5
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#") Категория 6
-		.menu
-			.menu__categories
-				img.menu__categories-img(src="assets/img/popular.png")
-			ul.menu__list_popular
-				li.menu__item
-					a.menu__link(href="#") 
-						span 1.
-						| Новогодний подарок 1
-				li.menu__item
-					a.menu__link(href="#") 
-						span 2.
-						| Новогодний подарок 2
-				li.menu__item
-					a.menu__link(href="#") 
-						span 3.
-						| Новогодний подарок 3
-				li.menu__item
-					a.menu__link(href="#")
-						span 4.
-						| Новогодний подарок 4
+		block sidebar
+			include _left_menu
+		block popular
+			include _popular
 	.main
 		.main__up
 			.main__up-header 

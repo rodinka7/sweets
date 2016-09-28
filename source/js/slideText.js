@@ -8,7 +8,7 @@ module.exports = function() {
 			top = $(window).scrollTop(),
 			img = $('.slider__text');
 
-		if (top > 200) {
+		if (top > 150) {
 			img.css('right', '1%');
 		}
 	});
