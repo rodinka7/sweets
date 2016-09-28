@@ -93,7 +93,7 @@
   &__text {
     position: absolute;
     
-    margin: -70px 0 0 200px;
+    margin: -70px 20% 0;
     
     text-transform: uppercase;
     color: #e0dfdc;
@@ -151,6 +151,8 @@
     }
 
     &-link {
+      display: block;
+      
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
