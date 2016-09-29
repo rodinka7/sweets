@@ -12,7 +12,6 @@ module.exports = function() {
         activeTabItem = tabItems.find('a').filter('[href="' + hash + '"]').parent(),
         activeLink = activeTabItem.find('.menu__link');
 
-    console.log(activeLink);
     tabs.filter(':not(' + hash + ')').removeClass('activeSection');
 
     if (activeTab.length) {

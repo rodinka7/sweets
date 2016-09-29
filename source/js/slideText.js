@@ -9,7 +9,7 @@ module.exports = function() {
 			img = $('.slider__text');
 
 		if (top > 150) {
-			img.css('right', '1%');
+			img.css('right', '10%');
 		}
 	});
 

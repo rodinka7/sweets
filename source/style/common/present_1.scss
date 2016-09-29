@@ -115,14 +115,14 @@
 	&__main {
 		position: relative;
 
-		height: 900px;
+		//height: 900px;
 	
 		&-inner {
 			position: absolute;
 			top: 0;
 			left: 0;
 
-			visibility: hidden;
+			display: none;
 		}
 		&-header {
 			color: #35230F;
@@ -166,7 +166,8 @@
 /* Переключение вкладок */
 .activeAdminSection{
 	background: rgba(255, 255, 255, 0.5);
-	visibility: visible;
+	
+	display: block;
 }
 .activeAdminItem{
 	background:#ffffff;	
