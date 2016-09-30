@@ -1,0 +1,26 @@
+.card {
+	&__item_agreement {
+		@extend .card_about__item;
+	
+		text-align: center;
+
+		margin-bottom: 30px;
+	}
+	
+	&__link_agreement {
+		display: block;
+
+		margin-bottom: 50px;
+
+		transition: .5s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	
+	&__img_agreement {
+		display: block;
+		margin: auto;
+	}
+}

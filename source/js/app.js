@@ -6,7 +6,8 @@
   		map = require('./map'),
       card_menu = require('./card_menu'),
       manu = require('./menu'),
-      height = require('./height');
+      height = require('./height'),
+      increase = require('./increase_pic');
 
 
   function isCurrent(page) {
@@ -25,9 +26,6 @@
 
   height();
 
-  /* Подключение Fancybox */
-  $(document).ready(function() {
-    $('.gallery').fancybox();
-  });
+  increase();
   
 })();

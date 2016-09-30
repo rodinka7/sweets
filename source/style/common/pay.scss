@@ -1,0 +1,28 @@
+.card__wrapper_price {
+	display: flex;
+
+	flex-flow: row wrap;
+
+	justify-content: center;
+}
+
+.card__img-wrapper_price {
+	width: 150px;
+	height: 150px;
+
+	margin: 20px;
+
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+	border: 3px solid #ECE8DE;
+	background: #fae7e6;
+	box-shadow: 2px 2px 2px #42413f;
+}
+.card__img_price {
+	width: 130px;
+}
