@@ -65,7 +65,8 @@
 			font: 14px/24px Georgia, sans-serif;
 
 			padding: 5px;
-			margin-bottom: 20px;
+
+			margin-bottom: 10px;
 		}
 		&-textarea {
 			width: 100%;
@@ -75,7 +76,27 @@
 			border-radius: 10px;
 			border: 1px solid #989696;
 
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 		}
 	}
+
+	&__btn-submit {
+		@extend .card__btn-1;
+		
+		color: #fff;
+		font: 11px Georgia, Arial, sans-serif;
+
+		text-transform: uppercase;
+		&:hover {
+			color: rgba(40,3,7,1);
+		}
+	}
+}
+
+.error {
+	display: block;
+
+	margin-bottom: 10px;
+
+	color: red;
 }

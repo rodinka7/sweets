@@ -7,7 +7,9 @@
       card_menu = require('./card_menu'),
       manu = require('./menu'),
       height = require('./height'),
-      increase = require('./increase_pic');
+      increase = require('./increase_pic'),
+      arrow = require('./arrow'),
+      sned = require('./send');
 
 
   function isCurrent(page) {
@@ -27,5 +29,9 @@
   height();
 
   increase();
+
+  arrow();
+
+  sned();
   
 })();

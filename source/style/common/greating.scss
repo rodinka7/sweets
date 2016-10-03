@@ -175,3 +175,30 @@
     }
   }
 }
+
+/* Стрелка вверх */
+.arrow {
+  position: absolute;
+
+  bottom: 3%;
+  right: 3%;
+  
+  width: 70px;
+  height: 40px;
+  z-index: 6;
+
+  position: fixed; 
+  cursor: pointer;
+
+  transition: .5s;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+  &:hover .arrow__svg-line{
+    stroke: #878787;
+  }
+
+  display: none;
+}
+/* Стрелка вверх */
