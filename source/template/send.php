@@ -1,68 +1,7 @@
-<?php
-/*if ($_POST) {
-    $name = stripslashes(strip_tags($_POST['name']));
-    $email = stripslashes(strip_tags($_POST['email']));
-    $message = stripslashes(strip_tags($_POST['message']));
-}
-ob_start();
-?>
-<html>
-<head>
-<style type="text/css">
-</style>
-</head>
-<body>
-<table width="550" border="1" cellspacing="2" cellpadding="2">
-  <tr bgcolor="#eeffee">
-    <td>Name</td>
-    <td><?=$name;?></td>
-  </tr>
-  <tr bgcolor="#eeeeff">
-    <td>Email</td>
-    <td><?=$email;?></td>
-  </tr>
-  <tr bgcolor="#eeffee">
-    <td>Phone</td>
-    <td><?=$phone;?></td>
-  </tr>
-</table>
-</body>
-</html>
 <?
-$body = ob_get_contents();
-
-$to = 'rodinka7@gmail.com';
-$fromaddress = $email;
-$fromname = $name;
-
-require("phpmailer.php");
-
-$mail = new PHPMailer();
-
-$mail->From     = $email;
-$mail->FromName = $name;
-
-
-$mail->WordWrap = 50;
-$mail->IsHTML(true);
-
-$mail->Subject  =  $message;
-$mail->Body     =  $body;
-$mail->AltBody  =  "This is the text-only body";
-
-if(!$mail->Send()) {
-    $recipient = 'your_email@example.com';
-    $subject = 'Contact form failed';
-    $content = $body;   
-  mail($recipient, $subject, $content, "From: mail@yourdomain.com\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
-  exit;
-}*/
-?>
-
-<?
-if($_POST){ //Проверка отправилось ли наше поля name и не пустые ли они
+/*if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
         $to = 'rodinka7@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок'; //Загаловок сообщения
+        $subject = $_POST['title']; //Загаловок сообщения
         $message = '
                 <html>
                     <head>
@@ -70,35 +9,50 @@ if($_POST){ //Проверка отправилось ли наше поля nam
                     </head>
                     <body>
                         <p>Имя: '.$_POST['name'].'</p>
-                        <p>Почта: '.$_POST['email'].'</p>
+                        <p>Телефон: '.$_POST['email'].'</p>
                         <p>Сообщение: '.$_POST['message'].'</p>                        
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
+        $headers .= "From: Отправитель ".$_POST['email']."\r\n"; //Наименование и почта отправителя
         mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+}*/
+
+// Define some constants
+define( "RECIPIENT_NAME", "Ольга Петричук" );
+define( "RECIPIENT_EMAIL", "rodinka7@gmail.com" );
+define( "EMAIL_SUBJECT", "Сообщение с сайта новогодних подарков" );
+
+// Read the form values
+$success = false;
+$senderName = isset( $_POST['name'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['name'] ) : "";
+$senderTitle = isset( $_POST['title'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['title'] ) : "";
+$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
+$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
+
+// If all values exist, send the email
+if ( $senderName && $senderEmail && $message ) {
+  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+  $headers = "From: " . $senderName . " <" . $senderEmail . ">";
+  $success = mail( $recipient, EMAIL_SUBJECT, $title, $message, $headers );
 }
+
+// Return an appropriate response to the browser
+if ( isset($_GET["ajax"]) ) {
+  echo $success ? "success" : "error";
+} else {
 ?>
 
 <html>
-<head>
-<style type="text/css">
-</style>
-</head>
-<body>
-<table width="550" border="1" cellspacing="2" cellpadding="2">
-  <tr bgcolor="#eeffee">
-    <td>Name</td>
-    <td><?=$name;?></td>
-  </tr>
-  <tr bgcolor="#eeeeff">
-    <td>Email</td>
-    <td><?=$email;?></td>
-  </tr>
-  <tr bgcolor="#eeffee">
-    <td>Phone</td>
-    <td><?=$phone;?></td>
-  </tr>
-</table>
-</body>
+  <head>
+    <title>Thanks!</title>
+  </head>
+  <body>
+  <?php if ( $success ) echo "<p>Thanks for sending your message! We'll get back to you shortly.</p>" ?>
+  <?php if ( !$success ) echo "<p>There was a problem sending your message. Please try again.</p>" ?>
+  <p>Click your browser's Back button to return to the page.</p>
+  </body>
 </html>
+<?php
+}
+?>

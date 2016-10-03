@@ -9,7 +9,8 @@ module.exports = function() {
 
 			var name = $('#name').val(),
 				email = $('#email').val(),
-				message = $('#message').val();
+				message = $('#message').val(),
+				title = $('#title').val();
 			
 			if (name == "") {
 				$("#error__name").animate({'opacity': 1}, 500);
@@ -22,15 +23,20 @@ module.exports = function() {
 				return false;
 			}
 
+			if (title == "") {
+				$("#error__title").animate({'opacity': 1}, 500);
+				$("#title").focus();
+				return false;
+			}
+
 			if (message == "") {
 				$("#error__message").animate({'opacity': 1}, 500);
 				$("#message").focus();
 				return false;
 			}
 
-			//var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
-			var form_data = $(this).serialize(); //собераем все данные из формы
-			//alert (dataString);return false;
+			var form_data = $(this).serialize();
+
 			$.ajax({
 				type: "POST",
 				url: "send.php",

@@ -1,13 +1,16 @@
 .card_contacts
 	.card__form-container
 		.card__form-header Свяжитесь с нами
-		form.card__form#form(method="POST")
+		form.card__form#form(method="POST" action="send.php")
 			label.card__form-label Ваше имя:
 				input.card__form-input#name(type='text' name="name" value='')
 			label.error#error__name Заполните это поле
 			label.card__form-label Электронная почта:
 				input.card__form-input#email(type='text' name="email" value='')
 			label.error#error__email Заполните это поле
+			label.card__form-label Тема сообщения:
+				input.card__form-input#title(type='text' name="title" value='')
+			label.error#error__title Заполните это поле
 			.card__form-label Ваше сообщение:
 				textarea#message(name="message" value='').card__form-textarea
 			label.error#error__message Заполните это поле
