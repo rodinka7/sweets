@@ -22,26 +22,64 @@
 	polygon {
 		fill: rgba(174,141,61,1);
 	}
+
+	@include laptop {
+		left: 30px;
+	}
 }
 .sidebar {
 	width: 20%;
 	float: left;
+
+	@include laptop {
+		width: 100%;
+	}
 }
 
 .menu {
 	width: 100%;
 	&__categories {
 		margin-top: 30px;
+		
+		@include laptop {
+			display: none;
+		}
+
+		&-img {
+			@include desktop {
+				max-width: 230px;
+			}
+		}
 	}
 	&__list {
 		width: 100%;
 		list-style: none;
 
 		margin: 50px 0 0 50px;
+		
+		@include desktop {
+			margin-left: 20px;
+		}
+		
+		@include laptop {
+			margin: 0;
+			padding: 10px 0 0;
 
+			border-bottom: 1px solid rgba(0,0,0,.5);
+			box-shadow: 1px 1px 1px 1px #5b564d;
+			background: #b7ad98;
+		}
 		&_popular {
 			@extend .menu__list;
 			margin-left: 30px;
+
+			@include desktop {
+				margin-left: 10px;
+			}
+
+			@include laptop {
+				display: none;
+			}
 		}
 	}
 
@@ -53,6 +91,13 @@
 		padding: 0 0 20px;
 
 		transition: .5s;
+		
+		@include laptop {
+			display: inline-block;
+			width: 32%;
+
+			text-align: center;
+		}
 
 		&:hover .menu__link {
 			color: rgba(222,27,42,1); 
@@ -66,6 +111,14 @@
 		text-decoration: none;
 		color: rgba(40,3,7,1);
 		font: 14px Georgia, Arial, sans-serif;
+
+		@include desktop {
+			font-size: 13px;
+		}
+
+		@include laptop {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -75,8 +128,29 @@
 
 	position: relative;
 
+	@include screen {
+		margin-left: 40px;
+
+		width: 72%;
+	}
+
+	@include laptop {
+		width: 100%;
+
+		margin-left: 0;
+	}
+
 	&__header {
 		margin: 30px 0 0 35px;
+
+		&-top {
+			color: #947D5C;
+			font-style: italic;
+
+			@include laptop {
+				font-height: 22px;
+			}
+		}
 	}
 	&__container {
 
@@ -106,3 +180,9 @@
   color: rgba(222,27,42,1); 
 }
 /* Переключение вкладок */
+
+#new__card {
+	@include laptop {
+		display: none;
+	}
+}

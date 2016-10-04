@@ -78,6 +78,12 @@
 		color: #927D5C;
 
 		margin-bottom: 30px;
+
+		@include desktop {
+			margin-bottom: 20px;
+
+			font-size: 20px;
+		}
 	}
 	
 	&__table {
@@ -86,9 +92,22 @@
 			padding: 10px;
 
 			font: 14px Georgia;
+			
+			@include desktop {
+				padding: 5px;
 
+				font-size: 13px;
+			}
 			span {
 				font-size: 32px;
+
+				@include screen {
+					font-size: 28px;
+				}
+
+				@include desktop {
+					font-size: 22px;
+				}
 			}
 		}
 	}
@@ -167,9 +186,18 @@
 			
 			text-transform: uppercase;
 			background: #ECE8DE;
+			color: #613C32;
+			
+			text-align: center;
+			@include box;
+			padding: 5px;
+			
+			@include desktop {
+				font-size: 10px;
+			}
 		}
 		
-		th, td {
+		td {
 			color: #613C32;
 			font: 12px/16px Georgia;
 			

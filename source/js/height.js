@@ -10,12 +10,19 @@ module.exports = function() {
 	function isCurrent(page) {
     	return $(page).length;
   	};
-  	if (isCurrent('#content__main')) {
+  	
+
+  	function containerH() {
+  		if (isCurrent('#content__main')) {
   		
-  		mainHeight = main.height() + container.height() + 40 + 'px';
-		main.css('height', mainHeight);
+	  		mainHeight = main.height() + container.height() + 40 + 'px';
+			main.css('height', mainHeight);
+  		}
   	}
 
+  	$(window).on('load', function(){
+  		containerH();
+  	})
 	/* Перерасчет высоты карточки */
 
   	if (isCurrent('#card_present')) {

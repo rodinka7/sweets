@@ -4,14 +4,17 @@
 		form.card__form#form(method="POST" action="send.php")
 			label.card__form-label Ваше имя:
 				input.card__form-input#name(type='text' name="name" value='')
-			label.error#error__name Заполните это поле
+			label.error#error__name Заполните поле с именем
 			label.card__form-label Электронная почта:
 				input.card__form-input#email(type='text' name="email" value='')
-			label.error#error__email Заполните это поле
+			label.error#error__email Укажите свою электронную почту
+			label.card__form-label Телефон:
+				input.card__form-input#phone(type='text' name="phone" value='')
+			label.error#error__phone Введите номер телефона
 			label.card__form-label Тема сообщения:
 				input.card__form-input#title(type='text' name="title" value='')
-			label.error#error__title Заполните это поле
+			label.error#error__title Укажите тему сообщения
 			.card__form-label Ваше сообщение:
 				textarea#message(name="message" value='').card__form-textarea
-			label.error#error__message Заполните это поле
+			label.error#error__message Заполните поле
 			input(type="submit" value="Отправить").card__btn-submit

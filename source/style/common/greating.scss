@@ -16,6 +16,10 @@
   margin: auto;
 
   @include box;
+
+  @include laptop {
+    height: 225px;
+  }
   &__top {
     width: 70%;
     float: right;
@@ -24,6 +28,10 @@
   /* Социальные иконки */
   &__socials {
     display: inline-block;
+    
+    @include laptop {
+      display: block;
+    }
 
     &-item {
       display: inline-block;
@@ -43,6 +51,10 @@
       color: #fff;
       font-size: 18px;
 
+      @include laptop {
+        font-size: 15px; 
+      }
+
     }
   }
   /* Социальные иконки */
@@ -50,6 +62,20 @@
     display: inline-block;
 
     margin-left: 100px;
+
+    @include screen {
+      margin-left: 50px;
+    }
+    
+    @include desktop {
+      margin-left: 20px; 
+    } 
+
+    @include laptop {
+      display: block;
+
+      margin-left: 0;
+    }
     &-item {
        font: 10px Georgia, Arial, sans-serif;
 
@@ -60,6 +86,10 @@
        @include box;
        margin-left: 35px;
        padding: 0;
+       
+       @include desktop {
+        margin-left: 20px;
+       }
 
        &:hover .header__top-menu-link {
         color: #35230f; 
@@ -92,11 +122,37 @@
   }
   &__logo {
     float: left;
+
+    &-img {
+      @include laptop {
+        max-width: 150px;
+      }
+    }
+
+    @include desktop {
+      margin-left: -15px;
+    }
   }
   &__text {
     float: right;
 
     margin-right: 40px;
+
+    @include screen {
+      margin: 15px 10px 0 0;
+      font-size: 12px;
+    }
+    
+    @include desktop {
+      margin: 10px 10px 0 0;
+      font-size: 11px;
+    }
+    
+    @include laptop {
+      float: none;
+
+      margin: 0 5px 5px 0;
+    }
 
     text-transform: uppercase;
     color: #E0DFDC;
@@ -108,6 +164,18 @@
 
     span {
       font-size: 49px;
+
+      @include screen {
+        font-size: 42px;
+      }
+
+      @include desktop {
+        font-size: 31px;
+      }
+
+      @include laptop {
+        font-size: 19px;
+      }
     }
   }
   &__menu {
@@ -127,6 +195,11 @@
       margin: auto;
       border-radius: 10px;
       box-shadow: 3px 10px 10px 10px rgba(31,2,2,1);
+
+      @include laptop {
+        height: 60px;
+        box-shadow: 3px 5px 5px 5px rgba(31,2,2,1);        
+      }
     }
     
     &-list {
@@ -140,10 +213,18 @@
       border-right:1px solid rgba(182,35,60,1); 
 
       text-align:center;
-
+      
       font: 17px/80px Georgia, Arial, sans-serif;
 
       cursor: pointer;
+      
+      @include desktop {
+        font-size: 15px;
+      }
+
+      @include laptop {
+        font: 12px/60px Georgia, Arial, sans-serif;
+      }
 
       &:last-child {
         border-right: none;
@@ -167,11 +248,19 @@
   &__run {
 
     margin-top: 20px;
+    
+    @include laptop {
+      margin-top: 15px;
+    }
 
     &-line {
       
       color: #fff;
       font: 20px Georgia, Arial, sans-serif;
+
+      @include laptop {
+        font: 16px Georgia, Arial, sans-serif;
+      }
     }
   }
 }
@@ -183,6 +272,13 @@
   bottom: 3%;
   right: 3%;
   
+  @include screen {
+    right: 1%;
+  }
+
+  @include laptop {
+    right: 0.5%;
+  }
   width: 70px;
   height: 40px;
   z-index: 6;

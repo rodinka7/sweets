@@ -16,18 +16,6 @@
 					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
 						polygon(points="0,0 8.7,5 0,10")
 					a.menu__link(href="#category3") Категория 3
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#category4") Категория 4
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#category5") Категория 5
-				li.menu__item
-					svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
-						polygon(points="0,0 8.7,5 0,10")
-					a.menu__link(href="#category6") Категория 6
 		.menu
 			.menu__categories
 				img.menu__categories-img(src="assets/img/popular.png")
@@ -44,16 +32,12 @@
 					a.menu__link(href="present_1.html") 
 						span 3.
 						| Новогодний подарок 3
-				li.menu__item
-					a.menu__link(href="present_1.html")
-						span 4.
-						| Новогодний подарок 4
 	.main
 		.main__up
 			.main__up-header 
 				a.main__up-link(href="index.html") Главная
-		.main__header
-			img.main__header-img(src="assets/img/1.png")
+		.main__header 
+			h1.main__header-top Новогодние подарки
 		.main__container#category1
 			block card
 				include _card
@@ -93,63 +77,6 @@
 			block card
 				include _card2
 		.main__container#category3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-			block card
-				include _card3
-		.main__container#category4
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-			block card
-				include _card
-		.main__container#category5
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-			block card
-				include _card2
-		.main__container#category6
 			block card
 				include _card3
 			block card

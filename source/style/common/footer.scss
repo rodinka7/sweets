@@ -10,23 +10,32 @@
 		width: 90%;
 		margin: 20px auto 0;
 		padding: 0;
-
 	}
 	
 	&__item {
-		width: 24%;
+		width: 32%;
 
 		display: inline-block;
 
 		vertical-align: top;
 		
 		@include box;
+		
+		padding-left: 50px;
+
+		@include laptop {
+			padding-left: 20px;
+		}
 
 		&-header {
 			font: 14px Georgia, Arial, sans-serif;
 			color: rgba(40,3,7,1);
 
 			text-transform: uppercase;
+
+			@include desktop {
+				font-size: 12px;
+			}
 		}
 	}
 	

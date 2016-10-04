@@ -10,7 +10,8 @@ module.exports = function() {
 			var name = $('#name').val(),
 				email = $('#email').val(),
 				message = $('#message').val(),
-				title = $('#title').val();
+				title = $('#title').val(),
+				phone = $('#phone').val();
 			
 			if (name == "") {
 				$("#error__name").animate({'opacity': 1}, 500);
@@ -23,6 +24,11 @@ module.exports = function() {
 				return false;
 			}
 
+			if (phone == "") {
+				$("#error__phone").animate({'opacity': 1}, 500);
+				$("#phone").focus();
+				return false;
+			}
 			if (title == "") {
 				$("#error__title").animate({'opacity': 1}, 500);
 				$("#title").focus();

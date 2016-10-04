@@ -11,6 +11,15 @@
 
 	overflow: hidden; 
 	
+	@include desktop {
+		width: 200px;
+		height: 300px;
+	}
+
+	@include laptop {
+		width: 230px;
+		height: 350px;
+	}
 	&:hover .card__block-left {
 		transform: translateX(0);
 	}

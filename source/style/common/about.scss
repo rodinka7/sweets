@@ -15,7 +15,10 @@
 		line-height: 1.5;
 
 		margin: 0 10px;
-
+		
+		@include laptop {
+			font-size: 13px;
+		}
 		&:hover {
 			color: #fff;
 		}
