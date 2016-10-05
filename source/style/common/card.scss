@@ -34,18 +34,20 @@
 	
 	&__pic {
 		position: absolute;
-		top: 10%;
+		top: 3%;
 
 		width: 100%;
 
 		&-img {
 			display: block;
 			margin:auto;
+
+			width: 210px;
 		}
 	}
 	&__info {
 		position: absolute;
-		top: 55%;
+		top: 70%;
 
 		width: 100%;
 
@@ -55,7 +57,7 @@
 	}
 	&__header {
 		color: rgba(124,8,20,1);
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 	&__art {
 		font-size: 12px;
@@ -65,7 +67,7 @@
 
 		font-size: 20px;
 
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 	&__btn {
 		position: absolute;
@@ -143,4 +145,9 @@
 			transition: .5s;
 		}
 	}
+}
+
+#img-height {
+	height: 230px;
+	width: auto;
 }

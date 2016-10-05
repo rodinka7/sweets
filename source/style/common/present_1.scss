@@ -50,7 +50,7 @@
 	}
 
 	&__pic-img_present {
-		max-width: 100%;
+		max-width: 100%;		
 	}
 	&__btn_present {
 		position: absolute;
@@ -163,8 +163,6 @@
 	&__main {
 		position: relative;
 
-		//height: 900px;
-	
 		&-inner {
 			position: absolute;
 			top: 0;
@@ -281,14 +279,19 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .increase__inner {
-	width: 480px;
-	height: 480px;
+	width: 500px;
+	height: auto;
 
 	border-radius: 20px;
 	border: 5px solid #ECE8DE;
 
 	overflow: hidden; 
+}
+
+.increase__img {
+	max-width: 100%;
 }
 .increase__close {
 	position: absolute;
