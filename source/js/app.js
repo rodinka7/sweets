@@ -9,8 +9,7 @@
       height = require('./height'),
       increase = require('./increase_pic'),
       arrow = require('./arrow'),
-      sned = require('./send'),
-      paginator = require('./paginator');
+      sned = require('./send');
 
 
   function isCurrent(page) {
@@ -34,7 +33,5 @@
   arrow();
 
   sned();
-
-  paginator();
   
 })();
