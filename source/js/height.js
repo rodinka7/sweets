@@ -2,15 +2,11 @@
 
 module.exports = function() {
 	
-	var 
+	/*var 
 		container = $('.main__container'),
 		main = $('.main'),
 		mainHeight;
-	
-	function isCurrent(page) {
-    	return $(page).length;
-  	};
-  	
+
 
   	function containerH() {
   		if (isCurrent('#content__main')) {
@@ -22,7 +18,12 @@ module.exports = function() {
 
   	$(window).on('load', function(){
   		containerH();
-  	})
+  	})*/
+
+  	function isCurrent(page) {
+    	return $(page).length;
+  	};
+  	
 	/* Перерасчет высоты карточки */
 
   	if (isCurrent('#card_present')) {
@@ -70,7 +71,20 @@ module.exports = function() {
 			mainContainer.css('height', mainContainerHeight);
 		}
 
-		/* Перерасчет высоты контейнера карточки */
-		
+		/* Перерасчет высоты контейнера карточки */		
   	};
+
+  	/* Изменение высоты картинки в каталоге */
+  		if (isCurrent('#catalog-page')) {
+  			picHeight();
+  		}
+
+  		function picHeight() {
+  			var pic = $('.card__pic-img_catalog');
+  			  			
+  			if (pic.height > (600 + 'px')) {
+  				pic.css('height', '250px');
+  			}
+  		}
+  	/* Изменение высоты картинки в каталоге */
 };

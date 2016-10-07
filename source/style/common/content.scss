@@ -24,7 +24,7 @@
 	}
 
 	@include laptop {
-		left: 30px;
+		display: none;
 	}
 }
 .sidebar {
@@ -55,7 +55,7 @@
 		width: 100%;
 		list-style: none;
 
-		margin: 50px 0 0 50px;
+		margin: 30px 0 0 50px;
 		
 		@include desktop {
 			margin-left: 20px;
@@ -63,7 +63,7 @@
 		
 		@include laptop {
 			margin: 0;
-			padding: 10px 0 0;
+			padding: 0;
 
 			border-bottom: 1px solid rgba(0,0,0,.5);
 			box-shadow: 1px 1px 1px 1px #5b564d;
@@ -88,15 +88,19 @@
 
 		@include box;
 
-		padding: 0 0 20px;
+		padding: 10px 0;
 
 		transition: .5s;
 		
 		@include laptop {
 			display: inline-block;
-			width: 32%;
+			width: 49%;
 
 			text-align: center;
+
+			&:first-child {
+				border-right: 1px solid #5b564d;
+			}
 		}
 
 		&:hover .menu__link {
@@ -104,6 +108,10 @@
 		}
 		&:hover {
 			transform: translate(15px, 0);
+
+			@include laptop {
+				transform: translate(0,0);
+			}
 		}
 	}
 
@@ -125,7 +133,6 @@
 .main {
 	float: right;
 	width: 75%;
-	position: relative;
 
 	@include screen {
 		margin-left: 40px;
@@ -155,10 +162,6 @@
 	}
 	&__container {
 
-		position: absolute;
-		top: 150px;
-		left: 0;
-
 		width:100%;
 
 		display: flex;
@@ -168,8 +171,17 @@
 
 		display: none;
 
-		&#category1, &#category2, &#catalog-container  {
-			top: 770px;
+		margin-bottom: 30px;
+
+		&-btn {
+			display: block;
+			width: 100%;
+			
+			.card__btn-2 {
+				@extend .card__btn-1;
+				margin: auto;
+			}
+
 		}
 	}
 }
@@ -180,6 +192,10 @@
 }
 .activeItem{
    transform: translate(15px, 0);
+
+   @include laptop {
+   	transform: translate(0,0);
+   }
 }
 .activeLink{
   color: rgba(222,27,42,1); 
@@ -190,4 +206,17 @@
 	@include laptop {
 		display: none;
 	}
+}
+
+#section2, #section3, #section4 {
+	width: 100%;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	display: none;
+}
+#showMore3, #showMore4 {
+	display: none;
 }

@@ -42,18 +42,4 @@ module.exports = function() {
 		
   	};
 
-  	/* Изменение высоты картинки в каталоге */
-  		if (isCurrent('#catalog-page')) {
-  			picHeight();
-  		}
-
-  		function picHeight() {
-  			var pic = $('.card__pic-img_catalog');
-  			  			
-  			if (pic.height > (600 + 'px')) {
-  				pic.css('height', '250px');
-  			}
-  		}
-  	/* Изменение высоты картинки в каталоге */
-
 };
