@@ -15,6 +15,10 @@
 		border-radius: 10px;
 
 		display: flex;
+
+		@include tablets {
+			display: block;
+		}
 	}
 	&__text_catalog {
 		font: 12px/24px Georgia, sans-serif;
@@ -28,9 +32,29 @@
 
 		justify-content: center;
 		margin-right: 20px;
+
+		@include tablets {
+			margin-right: 0;
+		}
 	}
 	&__pic-img_catalog {
-		max-width: 250px;
+		width: 250px;
+		
+		@include desktop {
+			width: 200px;
+		}
+
+		@include laptop {
+			width: 250px;
+		}
+
+		@include tablets {
+			margin: 0 auto 10px;
+		}
+
+		@include phones {
+			max-width: 230px;
+		}
 	}
 	&__info_catalog {
 		flex: 1 5 auto;

@@ -1,6 +1,7 @@
-header.header
-	section.header__top
-		nav.header__socials
+header
+	section.logo
+		nav.header__socials 
+			.header__socials-header Мы в соцсетях: 
 			ul.header__socials-list
 				li.header__socials-item
 					a.header__socials-link(href="#")
@@ -11,31 +12,30 @@ header.header
 				li.header__socials-item
 					a.header__socials-link(href="#")
 						i(class="fa fa-facebook" aria-hidden="true")
-		ul.header__top-menu
-			li.header__top-menu-item
-				a.header__top-menu-link(href="pay.html") Оплата и доставка
-			li.header__top-menu-item
-				a.header__top-menu-link(href="agreement.html") Наш магазин
-			li.header__top-menu-item
-				a.header__top-menu-link(href="assorty.html") Наш ассортимент
-	.header__section.clearfix
-		.header__logo
-			img.header__logo-img(src="assets/img/logo.png" width="210")
+		.header__top-menu
+			ul.header__top-menu-list
+				li.header__top-menu-item
+					a.header__top-menu-link(href="pay.html") Оплата и доставка
+				li.header__top-menu-item
+					a.header__top-menu-link(href="agreement.html") Наш магазин
+				li.header__top-menu-item
+					a.header__top-menu-link(href="assorty.html") Наш ассортимент
+	section.header
 		.header__text
 			| Закажите свой сладкий подарок прямо сейчас 
 			span +38(097)0671887
-	.header__menu-wrapper
-		.header__menu
-			ul.header__menu-list
-				li.header__menu-item
-					a.header__menu-link(href="index.html") Главная
-				li.header__menu-item
-					a.header__menu-link(href="catalog.html") Каталог
-				li.header__menu-item
-					a.header__menu-link(href="price.html") Прайс
-				li.header__menu-item
-					a.header__menu-link(href="about.html") О нас
-				li.header__menu-item
-					a.header__menu-link(href="contacts.html") Контакты
-	.header__run
-		marquee.header__run-line(behavior="alternite" direction="left") Лучшие сладкие новогодние подарки по низким ценам
+		.header__menu-wrapper
+			.header__menu
+				ul.header__menu-list
+					li.header__menu-item
+						a.header__menu-link(href="index.html") Главная
+					li.header__menu-item
+						a.header__menu-link(href="catalog.html") Каталог
+					li.header__menu-item
+						a.header__menu-link(href="price.html") Прайс
+					li.header__menu-item
+						a.header__menu-link(href="about.html") О нас
+					li.header__menu-item
+						a.header__menu-link(href="contacts.html") Контакты
+		.header__run
+			marquee.header__run-line(behavior="alternite" direction="left") Лучшие сладкие новогодние подарки по низким ценам

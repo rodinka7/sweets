@@ -56,6 +56,10 @@
 		font: 14px/24px Georgia;
 		color: rgba(68,7,22,1);
 		font-weight: bold;
+
+		@include tablets {
+			font-size: 12px;
+		}
 	}
 
 	&__link {
@@ -77,10 +81,18 @@
 	font: 16px/22px Georgia, sans-serif;
 	color: #7c1f2b;
 	margin: 20px 0;
+
+	@include tablets {
+		font-size: 12px;
+	}
 }
 
 .card__text-3 {
 	font-family: Georgia, sans-serif;
 	color: #7c1f2b;
 	margin: 20px 0;
+
+	@include tablets {
+		font-size: 16px;
+	}
 }

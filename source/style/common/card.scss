@@ -43,6 +43,13 @@
 			margin:auto;
 
 			width: 210px;
+
+			@include desktop {
+				width: 190px;
+			}
+			@include laptop {
+				width: 210px;
+			}
 		}
 	}
 	&__info {

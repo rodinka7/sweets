@@ -7,6 +7,13 @@
 	background: linear-gradient(to right bottom, rgba(201,188,160,1), #fff);
 	border-top: 3px solid rgba(235,231,221,1);
 	border-bottom: 3px solid rgba(235,231,221,1);
+
+	&__info {
+		@include box;
+		padding: 0 20px;
+
+		margin-top: 20px;
+	}
 }
 
 .svg-triangle {
@@ -102,7 +109,6 @@
 				border-right: 1px solid #5b564d;
 			}
 		}
-
 		&:hover .menu__link {
 			color: rgba(222,27,42,1); 
 		}
@@ -126,6 +132,9 @@
 
 		@include laptop {
 			font-size: 14px;
+		}
+		@include tablets {
+			font-size: 12px;	
 		}
 	}
 }

@@ -22,7 +22,27 @@
 	border: 3px solid #ECE8DE;
 	background: #fff;
 	box-shadow: 2px 2px 2px #42413f;
+
+	@include laptop {
+		width: 100px;
+		height: 100px;
+	}
+
+	@include phones {
+		width: 70px;
+		height: 70px;
+
+		margin: 10px;
+	}
 }
 .card__img_price {
 	width: 130px;
+	
+	@include laptop {
+		width: 90px;
+	}
+
+	@include laptop {
+		width: 60px;
+	}
 }
