@@ -1,0 +1,18 @@
+.content.clearfix#insert
+	.sidebar
+		block sidebar
+			include _left_menu
+		block popular
+			include _popular
+	.main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="index.html") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="present_7_2.html") Мишка
+		.main__header
+			h2.main__header-top Новогодний подарок
+		.main__container
+			block card_present
+				include _card_present7_2

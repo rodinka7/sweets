@@ -7,7 +7,11 @@
 	background: linear-gradient(to right bottom, rgba(201,188,160,1), #fff);
 	border-top: 3px solid rgba(235,231,221,1);
 	border-bottom: 3px solid rgba(235,231,221,1);
-
+	
+	@include phones {
+		width: 100%;
+	}
+	
 	&__info {
 		@include box;
 		padding: 0 20px;

@@ -6,10 +6,17 @@
 	background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
 	border: 1px solid rgba(124,8,20,1);
 	
+	@include phones {
+		width: 100%;
+	}
 	&__list {
 		width: 90%;
 		margin: 20px auto 0;
 		padding: 0;
+
+		@include phones {
+			margin-top: 10px;
+		}
 	}
 	
 	&__item {
@@ -49,6 +56,9 @@
 
 		list-style: none;
 		
+		@include phones {
+			margin-top: 10px;
+		}
 		&-item {
 			font: 12px Georgia, Arial, sans-serif;
 

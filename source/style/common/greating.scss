@@ -8,49 +8,112 @@
 }
 .logo {
 
-  width: 80%;
-  height: 270px;
+  width: 30%;
+  height: 100px;
+  
+  float: left;
 
-  margin: auto;
-  background: url(../img/logo.jpg) no-repeat center;
+  background: url(../img/logo.jpg) no-repeat top center;
   background-size: cover;
 
-  position: relative;
+  @include desktop {
+    width: 40%;
+  }
 
   @include laptop {
-    height: 200px;
+    width: 50%;
+  }
+
+  @include tablets {
+    float: none;
+    width: 100%;
   }
 }
 .header {
   width: 80%;
-  height: 200px;
+  height: 250px;
 
   background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
   border: 1px solid rgba(0,0,0,0);
   margin: auto;
 
   @include box;
-
+  
+  @include desktop {
+    height: 270px;
+  }
   @include laptop {
-    height: 217px;
+    height: 250px;
   }
 
+  @include tablets {
+    height: 310px;
+  }
+
+  @include phones {
+    height: 330px;
+
+    width: 100%;
+  }
+  
+  &__right {
+    width: 70%;
+    float: right;
+
+    @include desktop {
+      width: 59%;
+    }
+
+    @include laptop {
+      width: 49%;
+    }
+
+    @include tablets {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  &__top {
+    width: 95%;
+    margin: 10px auto 0;
+  }
   /* Социальные иконки */
   &__socials {
     
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
+    float: left;
+    
+    @include desktop {
+      float: none;
 
-    transform: translate(-50%, 0); 
+      display: block;
+      width: 100%;
+
+      text-align: center;
+
+      margin-bottom: 10px;
+    }
+
+    @include laptop {
+      margin-bottom: 5px;
+    }
     &-header {
       font: 12px Georgia, Arial, sans-serif;
-      color: rgba(222,27,42,1);
+      color: #fff;
       
-      font-weight: bold;
       display: inline-block;
 
       margin-right: 50px;
+
+      @include screen {
+        margin-right: 20px;
+      }
+
+      @include laptop {
+        margin-right: 10px;
+
+        font-size: 10px;
+      }
     }
 
     &-list {
@@ -70,12 +133,12 @@
       }
 
       &:hover .header__socials-link {
-        color: #35230f; 
+        color: rgba(222,27,42,1);
       }
     }
     
     &-link {
-      color: rgba(222,27,42,1);
+      color: #fff;
       font-size: 18px;
 
       @include laptop {
@@ -87,14 +150,18 @@
   /* Социальные иконки */
   
   &__top-menu {
-    position: absolute;
-
-    bottom: 25px;
-    left: 0;  
-    width: 100%;
-
-    text-align: center;
+    float: right; 
     
+    @include desktop {
+      float: none;
+
+      display: block;
+      width: 100%;
+
+      text-align: center;
+
+    }
+
     &-list {
       padding: 0;
       margin: 0;
@@ -107,11 +174,21 @@
 
        position: relative;
        
-       font-weight: bold;
        @include box;
        margin-left: 35px;
        padding: 0;
+       
+       @include laptop {
+          font-size: 9px;
+       }
 
+       @include tablets {
+        margin-left: 30px;
+       }
+
+       @include phones {
+        margin-left: 20px;
+       }
        &:hover .header__top-menu-link {
         color: #35230f; 
        }
@@ -159,6 +236,41 @@
 
     span {
       font-size: 49px;
+
+      @include screen {
+        font-size: 36px;
+      }
+
+      @include laptop {
+        font-size: 30px;
+      }
+
+      @include tablets {
+        font-size: 32px;
+      }
+
+      @include phones {
+        font-size: 24px;
+      }
+    }
+
+    @include screen {
+      font-size: 11px;
+    }
+
+    @include desktop {
+      margin-top: 10px;
+    }
+
+    @include laptop {
+      margin-top: 5px;
+      font-size: 10px;
+    }
+    @include tablets {
+      font-size: 11px;
+    }
+    @include phones {
+      font-size: 9px;
     }
   }
   &__menu {

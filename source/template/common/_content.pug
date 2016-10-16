@@ -17,17 +17,25 @@
 				img.menu__categories-img(src="assets/img/popular.png")
 			ul.menu__list_popular
 				li.menu__item
-					a.menu__link(href="present_20.html") 
-						span 1.
-						| Новогодний лес
+					a.menu__link(href="present_1.html") 
+						span 1. 
+						|  Ретро
 				li.menu__item
 					a.menu__link(href="present_2.html") 
 						span 2.
-						| Паровозик
+						| Паровоз-пакет
 				li.menu__item
-					a.menu__link(href="present_24.html") 
+					a.menu__link(href="present_3.html") 
 						span 3.
-						| Дедушка Мороз с саксафоном
+						| Петривка-пакет
+				li.menu__item
+					a.menu__link(href="present_4.html") 
+						span 4.
+						| Сумочка с письмом
+				li.menu__item
+					a.menu__link(href="present_6_1.html") 
+						span 5.
+						| Зима в лесу эльфов
 	.main#main-page
 		.main__up
 			.main__up-header 
@@ -48,7 +56,13 @@
 			block card
 				include _card6
 			block card
+				include _card6_1
+			block card
+				include _card6_2
+			block card
 				include _card7
+			block card
+				include _card7_1
 		.main__container#category2
 			block card
 				include _card8
@@ -67,7 +81,13 @@
 			block card
 				include _card15
 			block card
+				include _card15_1
+			block card
 				include _card16
+			block card
+				include _card7_2
+			block card
+				include _card9_1
 			.main__container-btn#showMore2
 				.card__btn-2
 					a.card__btn-1-link(href="#") Показать еще
@@ -77,8 +97,10 @@
 				block card
 					include _card18
 				block card
-					include _card19
+					include _card18_1
 				block card
+					include _card19
+				//block card
 					include _card20
 				block card
 					include _card21
@@ -86,9 +108,9 @@
 					include _card22
 				block card
 					include _card23
-				block card
+				//block card
 					include _card24
-				block card
+				//block card
 					include _card25
 			.main__container-btn#showMore3
 				.card__btn-2
@@ -96,22 +118,24 @@
 			#section3
 				block card
 					include _card26
-				block card
+				//block card
 					include _card27
 				block card
 					include _card28
-				block card
+				//block card
 					include _card29
-				block card
+				//block card
 					include _card30
-				block card
+				//block card
 					include _card31
 				block card
 					include _card32
-				block card
+				//block card
 					include _card33
 				block card
 					include _card34
+				block card
+				include _card7_3
 		.content__info
 			.card_about__text Не знаете, что подарить малышам на Новый год? Скоро в гости, Новый год на носу, а подарки не готовы? Тогда мы спасем Ваше положение со сладкими новогодними подарками для детей.
 			.card_about__text Наш сайт предлагает огромный выбор самых вкусных и качественных сладких новогодних подарков от производителя. Мы с радостью доставим вам наилучшие конфеты, шоколадки, мармелад, вафли и другие сладости в самые сжатые сроки.

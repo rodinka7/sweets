@@ -11,7 +11,8 @@
       arrow = require('./arrow'),
       sned = require('./send'),
       showMore = require('./showMore'),
-      countH = require('./countH');
+      countH = require('./countH'),
+      sliderHeight = require('./sliderHeight');
 
 
   function isCurrent(page) {
@@ -37,5 +38,7 @@
   sned();
 
   showMore(); 
+
+  sliderHeight();
   
 })();
