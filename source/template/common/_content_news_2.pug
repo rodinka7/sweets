@@ -1,0 +1,18 @@
+.content.clearfix
+	.sidebar
+		block sidebar
+			include _left_menu
+		block new
+			include _new
+	.main#content__main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="index.html") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="news_2.html") Новости
+
+		.main__header
+			h1.main__header-top Новости
+		.main__container
+			
