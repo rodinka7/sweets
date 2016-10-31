@@ -4,7 +4,7 @@
 
 	margin:auto;
 	
-	background: linear-gradient(to right bottom, rgba(201,188,160,1), #fff);
+	background: #F9F8EE;
 	border-top: 3px solid rgba(235,231,221,1);
 	border-bottom: 3px solid rgba(235,231,221,1);
 	
@@ -128,7 +128,7 @@
 	&__link {
 		text-decoration: none;
 		color: rgba(40,3,7,1);
-		font: 14px Georgia, Arial, sans-serif;
+		font: 14px 'Open Sans', Arial, sans-serif;
 
 		@include desktop {
 			font-size: 13px;

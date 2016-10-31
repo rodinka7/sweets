@@ -1,14 +1,18 @@
 .footer {
 	width: 80%;
-	height: 230px;
+	height: 260px;
 	margin:auto;
 
 	background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
 	border: 1px solid rgba(124,8,20,1);
 	
+	@include tablets {
+		height: 230px;
+	}	
 	@include phones {
 		width: 100%;
 	}
+
 	&__list {
 		width: 90%;
 		margin: 20px auto 0;
@@ -35,7 +39,7 @@
 		}
 
 		&-header {
-			font: 14px Georgia, Arial, sans-serif;
+			font: 14px 'Open Sans', Arial, sans-serif;
 			color: rgba(40,3,7,1);
 
 			text-transform: uppercase;
@@ -60,7 +64,7 @@
 			margin-top: 10px;
 		}
 		&-item {
-			font: 12px Georgia, Arial, sans-serif;
+			font: 12px 'Open Sans', Arial, sans-serif;
 
 			transition: .5s;
 
@@ -74,7 +78,7 @@
 			}
 
 			@include tablets {
-				font: 10px Georgia, Arial, sans-serif;
+				font: 10px 'Open Sans', Arial, sans-serif;
 			}
 
 		}
@@ -86,7 +90,7 @@
 	}
 
 	&__sign {
-		font: 14px Georgia, Arial, sans-serif;
+		font: 14px 'Open Sans', Arial, sans-serif;
 		color: rgba(222,27,42,1); 
 
 		text-align: right;
@@ -94,7 +98,7 @@
 		margin: 20px 50px 0 0;
 
 		@include tablets {
-			font: 12px Georgia, Arial, sans-serif;
+			font: 12px 'Open Sans', Arial, sans-serif;
 		}
 	}
 }

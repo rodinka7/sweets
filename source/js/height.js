@@ -1,24 +1,6 @@
 'use strict';
 
 module.exports = function() {
-	
-	/*var 
-		container = $('.main__container'),
-		main = $('.main'),
-		mainHeight;
-
-
-  	function containerH() {
-  		if (isCurrent('#content__main')) {
-  		
-	  		mainHeight = main.height() + container.height() + 40 + 'px';
-			main.css('height', mainHeight);
-  		}
-  	}
-
-  	$(window).on('load', function(){
-  		containerH();
-  	})*/
 
   	function isCurrent(page) {
     	return $(page).length;
@@ -73,18 +55,4 @@ module.exports = function() {
 
 		/* Перерасчет высоты контейнера карточки */		
   	};
-
-  	/* Изменение высоты картинки в каталоге */
-  		if (isCurrent('#catalog-page')) {
-  			picHeight();
-  		}
-
-  		function picHeight() {
-  			var pic = $('.card__pic-img_catalog');
-  			  			
-  			if (pic.height > (600 + 'px')) {
-  				pic.css('height', '250px');
-  			}
-  		}
-  	/* Изменение высоты картинки в каталоге */
 };

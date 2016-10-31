@@ -11,8 +11,8 @@
       arrow = require('./arrow'),
       sned = require('./send'),
       showMore = require('./showMore'),
-      countH = require('./countH'),
-      sliderHeight = require('./sliderHeight');
+      sliderHeight = require('./sliderHeight'),
+      sendPhone = require('./sendPhone');
 
 
   function isCurrent(page) {
@@ -40,5 +40,7 @@
   showMore(); 
 
   sliderHeight();
+
+  sendPhone();
   
 })();

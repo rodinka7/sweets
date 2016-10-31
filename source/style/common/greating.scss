@@ -98,7 +98,7 @@
       margin-bottom: 5px;
     }
     &-header {
-      font: 12px Georgia, Arial, sans-serif;
+      font: 12px 'Open Sans', Arial, sans-serif;
       color: #fff;
       
       display: inline-block;
@@ -168,7 +168,7 @@
     }
     
     &-item {
-       font: 10px Georgia, Arial, sans-serif;
+       font: 10px 'Open Sans', Arial, sans-serif;
 
        display: inline-block;
 
@@ -228,7 +228,7 @@
 
     text-transform: uppercase;
     color: #E0DFDC;
-    font: 13px/24px Georgia, sans-serif;
+    font: 13px/24px 'Open Sans', sans-serif;
     
     text-shadow: 0 3px #2e2e2e,
                  0 4px #2a2a2a,
@@ -289,11 +289,10 @@
 
       margin: 20px auto 0;
       border-radius: 10px;
-      box-shadow: 3px 10px 10px 10px rgba(31,2,2,1);
+      box-shadow: 1px 2px 2px 2px rgba(31,2,2,1);
 
       @include laptop {
-        height: 60px;
-        box-shadow: 3px 5px 5px 5px rgba(31,2,2,1);        
+        height: 60px;        
       }
 
       @include tablets {
@@ -307,33 +306,34 @@
     }
     &-item {
       display: inline-block;
-      width: 19%;
+      width: 16%;
 
       border-right:1px solid rgba(182,35,60,1); 
 
       text-align:center;
       
-      font: 17px/80px Georgia, Arial, sans-serif;
+      font: 17px/80px 'Open Sans', Arial, sans-serif;
 
       cursor: pointer;
       
       @include desktop {
         font-size: 15px;
+         width: 15.5%;
       }
 
       @include laptop {
-        font: 12px/60px Georgia, Arial, sans-serif;
+        font: 12px/60px 'Open Sans', Arial, sans-serif;
       }
       
       @include tablets {
-        font: 9px/40px Georgia, Arial, sans-serif;
-        width: 18.5%; 
+        font: 8px/40px 'Open Sans', Arial, sans-serif;
+        width: 15%; 
       }
 
       @include phones {
-        font: 7px/40px Georgia, Arial, sans-serif;
+        font: 7px/40px 'Open Sans', Arial, sans-serif;
 
-        width: 18%;
+       // width: 18%;
       }
       &:last-child {
         border-right: none;
@@ -365,10 +365,10 @@
     &-line {
       
       color: #fff;
-      font: 20px Georgia, Arial, sans-serif;
+      font: 20px 'Open Sans', Arial, sans-serif;
 
       @include laptop {
-        font: 16px Georgia, Arial, sans-serif;
+        font: 16px 'Open Sans', Arial, sans-serif;
       }
 
       @include tablets {
@@ -421,3 +421,227 @@
   display: none;
 }
 /* Стрелка вверх */
+
+/* Позвонить */
+.call {
+  
+  position: fixed;
+
+  right: 2%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(252,252,252,0);
+
+  width: 67px;
+  height: 67px;
+
+  cursor: pointer;
+
+  &-1 {
+
+    border: 1px solid rgba(252,252,252,0.1);
+    background: rgba(252,252,252,0.2);
+
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s;
+
+    @include laptop {
+     width: 57px;
+     height: 57px;
+    }
+
+    @include tablets {
+       width: 42px;
+       height: 42px;
+    }
+  }
+
+  @include laptop {
+     width: 57px;
+     height: 57px;
+
+     right: 1.5%;
+  }
+
+  @include tablets {
+     width: 42px;
+     height: 42px;
+
+     right: 1%;
+  }
+  
+  &__mess {
+    width: 120px;
+    
+    visibility: hidden;
+    
+    transition: .5s;
+
+    @include box;
+    padding: 10px;
+
+    background: #fff;
+    border: 1px solid #7c7979;
+    border-radius: 10px;
+
+    position: relative;
+    top: 10px;
+    right: 30px;
+
+    z-index: 15;
+
+    @include laptop {
+      width: 100px;
+    }
+
+    @include tablets {
+      right: 70px;
+    }
+
+    &-text {
+      font: 14px/22px 'Open Sans', sans-serif;
+      color: rgba(40,3,7,1);
+
+      @include laptop {
+        font-size: 10px;
+      }
+     }
+  }
+
+  &:hover .call-1{
+    background: rgba(252,252,252,0.5);
+  }
+
+  &:hover .call__wrapper{
+    background: rgba(252,252,252,0.7);
+  }
+
+  &:hover .call__mess{
+    visibility: visible;
+  }
+
+  &__wrapper {
+    background: rgba(252,252,252,0.5);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    @include tablets {
+       width: 37px;
+       height: 37px;
+    }
+  }
+
+  &__img {
+    width: 50px;
+
+    @include tablets {
+      width: 35px;
+    }
+  }
+}
+
+#call {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+
+  background: rgba(0,0,0,0.7);
+
+  z-index: 10;
+
+  display: none;
+}
+
+.call {
+  &__form {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 40%;
+    background: #fff;
+
+    @include box;
+
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+    &:hover .call__close-1, &:hover span {
+      background: #f9e4e4;
+    }
+
+    &-1 {
+      position: absolute;
+      top: 0;
+      left:0;
+
+      width: 100%;
+      height: 2px;
+      border: 1px solid #dbd7d7;
+      background: #dbd7d7;
+      border-radius: 25%;
+
+      transform: rotate(45deg);
+    }
+    span {
+      display: block;
+
+      width: 100%;
+      height: 2px;
+      border: 1px solid #dbd7d7;
+      background: #dbd7d7;
+      border-radius: 25%;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__input {
+    display: block;
+
+    width: 100%;
+
+    @include box;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.7);
+
+  }
+}
+/* Позвонить */

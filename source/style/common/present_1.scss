@@ -82,7 +82,7 @@
 	}
 
 	&__header_present {
-		font: 24px/32px Georgia;
+		font: 24px/32px 'Open Sans';
 		color: #927D5C;
 
 		margin-bottom: 30px;
@@ -111,7 +111,7 @@
 			@include box;
 			padding: 10px;
 
-			font: 14px Georgia;
+			font: 14px 'Open Sans';
 			
 			@include desktop {
 				padding: 5px;
@@ -188,7 +188,7 @@
 			width: 100%;
 			height: 100%;
 
-			font: 16px/24px Georgia;
+			font: 16px/24px 'Open Sans';
 			color: #737373;
 
 			text-decoration: none;
@@ -197,7 +197,7 @@
 
 	&__text_present {
 			color: #35230F;
-			font: 14px/22px Georgia, sans-serif;
+			font: 14px/22px 'Open Sans', sans-serif;
 
 			@include tablets {
 				font-size: 11px;
@@ -215,7 +215,7 @@
 		}
 		&-header {
 			color: #35230F;
-			font: 12px/22px Georgia, sans-serif;
+			font: 12px/22px 'Open Sans', sans-serif;
 		}
 		
 		&-img {
@@ -227,7 +227,7 @@
 		}
 
 		th {
-			font: 12px/16px Georgia;
+			font: 12px/16px 'Open Sans';
 			
 			text-transform: uppercase;
 			background: #ECE8DE;
@@ -252,7 +252,7 @@
 		
 		td {
 			color: #613C32;
-			font: 12px/16px Georgia;
+			font: 12px/16px 'Open Sans';
 			
 			text-align: center;
 			@include box;
@@ -266,7 +266,7 @@
 		&-td-header {
 			text-align: left;
 
-			font: 12px/16px Georgia;
+			font: 12px/16px 'Open Sans';
 			margin-bottom: 10px;
 
 			@include phones {
@@ -277,7 +277,7 @@
 		&-td-info {
 			text-align: left;
 
-			font: 10px/16px Georgia;
+			font: 10px/16px 'Open Sans';
 
 			@include phones {
 				font-size: 8px;
@@ -351,10 +351,10 @@
 
 .increase__inner {
 	width: 500px;
-	height: auto;
-
+	
 	border-radius: 20px;
 	border: 5px solid #ECE8DE;
+	background: #fff;
 
 	overflow: hidden; 
 

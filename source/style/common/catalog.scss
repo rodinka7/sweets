@@ -21,7 +21,7 @@
 		}
 	}
 	&__text_catalog {
-		font: 12px/24px Georgia, sans-serif;
+		font: 12px/24px 'Open Sans', sans-serif;
 		color: rgba(68,7,22,1);
 	}
 	&__pic_catalog {
@@ -71,7 +71,18 @@
 		align-items: center;
 	}
 	&__art_catalog {
-		font: 12px/16px Georgia, sans-serif;
+		font: 14px/16px 'Open Sans', sans-serif;
 		margin-bottom: 10px;
+
+		color: #800915;
+	}
+
+	&__art_catalog-weight {
+
+		font: 16px/16px 'Open Sans', sans-serif;
+		
+		margin-bottom: 10px;
+
+		color: #c40115;
 	}
 }

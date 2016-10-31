@@ -39,21 +39,21 @@
 	border-radius: 10px;
 
 	&__header {
-		font: 16px/24px Georgia;
+		font: 16px/24px 'Open Sans';
 		color: rgba(68,7,22,1);
 
 		margin: 10px 0 20px;
 	}
 
 	&__text {
-		font: 12px/20px Georgia;
+		font: 12px/20px 'Open Sans';
 		color: rgba(68,7,22,0.7);
 
 		margin-bottom: 15px;
 	}
 
 	&__item {
-		font: 14px/24px Georgia;
+		font: 14px/24px 'Open Sans';
 		color: rgba(68,7,22,1);
 		font-weight: bold;
 
@@ -78,7 +78,7 @@
 }
 
 .card__text-2 {
-	font: 16px/22px Georgia, sans-serif;
+	font: 16px/22px 'Open Sans', sans-serif;
 	color: #7c1f2b;
 	margin: 20px 0;
 
@@ -88,7 +88,7 @@
 }
 
 .card__text-3 {
-	font-family: Georgia, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #7c1f2b;
 	margin: 20px 0;
 

@@ -2,3 +2,19 @@
 	svg.arrow__svg
 		line.arrow__svg-line(x1="5" y1="25" x2="25" y2="5" stroke-width="5" stroke="white")
 		line.arrow__svg-line(x1="23" y1="5" x2="43" y2="25" stroke-width="5" stroke="white")
+.call
+	.call-1
+		.call__wrapper
+			img.call__img(src='assets/img/call.png')
+	.call__mess
+		.call__mess-text Оставьте свой номер телефона, и наш менеджер свяжется с Вами
+
+#call
+	.call__form 
+		form#call-form(method="POST" action="sendPhone.php")
+			input.call__input(type="text" placeholder="Ваше имя" name="name")
+			input.call__input(type="text" placeholder="Ваш телефон" name="phone")
+			input(type="submit" value="Отправить").card__btn-submit
+	.call__close
+		.call__close-1
+		span
