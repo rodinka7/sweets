@@ -1,6 +1,6 @@
 .footer {
 	width: 80%;
-	height: 260px;
+	height: 200px;
 	margin:auto;
 
 	background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
@@ -15,11 +15,11 @@
 
 	&__list {
 		width: 90%;
-		margin: 20px auto 0;
+		margin: 10px auto 0;
 		padding: 0;
 
 		@include phones {
-			margin-top: 10px;
+			margin-top: 5px;
 		}
 	}
 	
@@ -55,7 +55,7 @@
 	}
 	
 	&__list-inner {
-		margin: 30px 0 0 0;
+		margin: 10px 0 0 0;
 		padding: 0;
 
 		list-style: none;
@@ -68,7 +68,7 @@
 
 			transition: .5s;
 
-			padding-bottom: 10px;
+			padding-bottom: 5px;
 
 			&:hover .footer__list-inner-link {
 				color: rgba(222,27,42,1); 

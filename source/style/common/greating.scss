@@ -16,22 +16,14 @@
   background: url(../img/logo.png) no-repeat top center;
   background-size: cover;
 
-  @include desktop {
-    width: 40%;
-  }
-
   @include laptop {
-    width: 50%;
+    max-width: 100px;
+    height: 33px;
   }
-
-  @include tablets {
-    float: none;
-    width: 100%;
-  } 
 }
 .header {
   width: 80%;
-  height: 250px;
+  height: 150px;
 
   background: linear-gradient(to right bottom, rgba(124,8,20,1), rgba(188,20,37,1));
   border: 1px solid rgba(0,0,0,0);
@@ -39,25 +31,17 @@
 
   @include box;
   
-  @include desktop {
-    height: 270px;
-  }
   @include laptop {
-    height: 250px;
+    height: 120px;
   }
-
-  @include tablets {
-    height: 310px;
-  }
-
   @include phones {
-    height: 330px;
-
     width: 100%;
   }
+
+  
   
   &__upper {
-    padding: 20px;
+    padding: 20px 20px 5px;
   }
   
   &__top-menu {
@@ -65,18 +49,23 @@
     width: 80%;
 
     @include desktop {
-      float: none;
+      width:75%;
+    }
 
-      display: block;
-      width: 100%;
+    @include laptop {
+      width: 80%;
+    }
 
-      text-align: center;
-
+    @include tablets {
+      width: 70%;
     }
 
     &-list {
       padding: 0;
       margin: 0;
+
+      display: inline-block;
+      float: right;
     }
     
     &-item {
@@ -87,20 +76,17 @@
        position: relative;
        
        @include box;
-       margin-left: 35px;
+       margin-left: 20px;
        padding: 0;
        
+       @include desktop {
+        margin-left: 10px;
+        font-size: 9px;
+       }
        @include laptop {
-          font-size: 9px;
+          font-size: 7px;
        }
 
-       @include tablets {
-        margin-left: 30px;
-       }
-
-       @include phones {
-        margin-left: 20px;
-       }
        &:hover .header__top-menu-link {
         color: #35230f; 
        }
@@ -133,6 +119,8 @@
   }
   
   &__text {
+    display: inline-block;
+
     text-transform: uppercase;
     color: #E0DFDC;
     font: 13px/24px 'Open Sans', sans-serif;
@@ -142,21 +130,21 @@
                  0 5px 0 #262626;
 
     span {
+      margin-left: 10px;
+
       font-size: 30px;
 
-      @include screen {
-        font-size: 30px;
+      @include desktop {
+        margin-left: 5px;
+
+        font-size: 22px;
       }
 
       @include laptop {
-        font-size: 30px;
+        font-size: 16px;
       }
 
       @include tablets {
-        font-size: 32px;
-      }
-
-      @include phones {
         font-size: 24px;
       }
     }
@@ -166,17 +154,12 @@
     }
 
     @include desktop {
-      margin-top: 10px;
+      font-size: 8px;
     }
 
-    @include laptop {
-      margin-top: 5px;
-      font-size: 10px;
-    }
     @include tablets {
-      font-size: 11px;
-    }
-    @include phones {
+      float: right;
+
       font-size: 9px;
     }
   }
@@ -192,14 +175,14 @@
     
     &-wrapper {
       width: 85%;
-      height: 80px;
+      height: 60px;
 
-      margin: 20px auto 0;
+      margin: auto;
       border-radius: 10px;
       box-shadow: 1px 2px 2px 2px rgba(31,2,2,1);
-
+    
       @include laptop {
-        height: 60px;        
+        height: 45px;        
       }
 
       @include tablets {
@@ -219,7 +202,7 @@
 
       text-align:center;
       
-      font: 17px/80px 'Open Sans', Arial, sans-serif;
+      font: 17px/60px 'Open Sans', Arial, sans-serif;
 
       cursor: pointer;
       
@@ -229,7 +212,7 @@
       }
 
       @include laptop {
-        font: 12px/60px 'Open Sans', Arial, sans-serif;
+        font: 12px/45px 'Open Sans', Arial, sans-serif;
       }
       
       @include tablets {

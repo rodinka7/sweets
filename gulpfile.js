@@ -14,6 +14,9 @@ global.$ = {
   browserSync: require('browser-sync').create(),
   browserify: require('browserify'),
   source: require('vinyl-source-stream'),
+  imagemin: require('gulp-imagemin'),
+  uglify: require('gulp-uglify'),
+  pump: require('pump'),
   gp: require('gulp-load-plugins')()
 };
 
