@@ -12,7 +12,8 @@
       sned = require('./send'),
       showMore = require('./showMore'),
       sliderHeight = require('./sliderHeight'),
-      sendPhone = require('./sendPhone');
+      sendPhone = require('./sendPhone'),
+      contentController = require('./contentController.js');
 
 
   function isCurrent(page) {
@@ -42,5 +43,7 @@
   sliderHeight();
 
   sendPhone();
+
+  contentController();
   
 })();

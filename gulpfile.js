@@ -15,8 +15,8 @@ global.$ = {
   browserify: require('browserify'),
   source: require('vinyl-source-stream'),
   imagemin: require('gulp-imagemin'),
+  buffer: require('vinyl-buffer'),
   uglify: require('gulp-uglify'),
-  pump: require('pump'),
   gp: require('gulp-load-plugins')()
 };
 

@@ -14,6 +14,8 @@ module.exports = function() {
         }
       }))
       .pipe($.source('app.js'))
+      .pipe($.buffer())
+      //.pipe($.uglify())
       .pipe($.gulp.dest($.config.root + '/assets/js'));
   })
 };

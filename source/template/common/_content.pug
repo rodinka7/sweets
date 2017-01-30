@@ -1,4 +1,4 @@
-.content.clearfix#content__main
+.content.clearfix#content__main(ng-controller="contentController as contentList")
 	.sidebar
 		.menu
 			.menu__categories
@@ -47,65 +47,15 @@
 		.main__container#category1
 			block card
 				include _card
-			block card
-				include _card2
-			block card
-				include _card3
-			block card
-				include _card4
-			block card
-				include _card6_1
-			block card
-				include _card7
-			block card
-				include _card7_1
 		.main__container#category2
 			block card
-				include _card8
-			block card
-				include _card10
-			block card
-				include _card11
-			block card
-				include _card12
-			block card
-				include _card13
-			block card
-				include _card15_1
-			block card
-				include _card16
-			block card
-				include _card7_2
-			block card
-				include _card9_1
+				include _card2
 			.main__container-btn#showMore2
 				.card__btn-2
 					a.card__btn-1-link(href="#") Показать еще
 			#section2
 				block card
-					include _card18
-				block card
-					include _card18_1
-				block card
-					include _card19
-				block card
-					include _card21
-				block card
-					include _card22
-				block card
-					include _card23
-			.main__container-btn#showMore3
-				.card__btn-2
-					a.card__btn-1-link(href="#") Показать еще
-			#section3
-				block card
-					include _card26
-				block card
-					include _card28
-				block card
-					include _card34
-				block card
-				include _card7_3
+					include _card3
 		.content__info
 			.card_about__text Не знаете, что подарить малышам на Новый год? Скоро в гости, Новый год на носу, а подарки не готовы? Тогда мы спасем Ваше положение со сладкими новогодними подарками для детей.
 			.card_about__text Наш сайт предлагает огромный выбор самых вкусных и качественных сладких новогодних подарков от производителя. Мы с радостью доставим вам наилучшие конфеты, шоколадки, мармелад, вафли и другие сладости в самые сжатые сроки.

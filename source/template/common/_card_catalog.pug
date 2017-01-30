@@ -1,13 +1,13 @@
-.card_catalog
+.card_catalog(ng-repeat="item in contentList.list")
 	.card__pic_catalog
-		img.card__pic-img_catalog(src="assets/img/presents/1.png")
+		img.card__pic-img_catalog(ng-src="{{item.src}}")
 	.card__info_catalog
-		.card__header Ретро
-		.card__text_catalog Сладкий новогодний подарок "Ретро" из шоколадных конфет и вафельных батончиков в шоколадной глазури торговых марок Рошен и АВК. Упаковка выполнена в ретро стиле и предаставляет собой оригинально оформленную картонную коробочку с открыткой. Всего в подарке 89 конфет.
+		.card__header {{item.header}}
+		.card__text_catalog {{item.info}}
 	.card__price_catalog
-		.card__price 168.50 грн
-		.card__art_catalog арт. 701
-		.card__art_catalog-weight 1080 г
+		.card__price {{item.price}}
+		.card__art_catalog {{item.art}}
+		.card__art_catalog-weight {{item.weight}}
 		.card__btn_catalog
 			.card__btn-1
-				a.card__btn-1-link(href="present_1.html") Подробнее
+				a.card__btn-1-link(href="{{item.href}}") Подробнее

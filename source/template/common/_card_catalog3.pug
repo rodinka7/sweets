@@ -1,13 +1,13 @@
-.card_catalog
+.card_catalog(ng-repeat="item in contentList.list3")
 	.card__pic_catalog
-		img.card__pic-img_catalog(src="assets/img/presents/2.png")
+		img.card__pic-img_catalog(src="{{item.src}}")
 	.card__info_catalog
-		.card__header Петривка-пакет
-		.card__text_catalog Сладкий новогодний подарок, который отлично подойдет как для детей, так и для взрослых. Упакован в картонную коробочку с изображением добродушного паровоза. В состав входят конфеты торговых марок Рошен и АВК. Всего в подарке 99 конфет.
+		.card__header {{item.header}}
+		.card__text_catalog {{item.info}}
 	.card__price_catalog
-		.card__price 163.75 грн
-		.card__art_catalog арт. 706
-		.card__art_catalog-weight 1205 г
+		.card__price {{item.price}}
+		.card__art_catalog {{item.art}}
+		.card__art_catalog-weight {{item.weight}}
 		.card__btn_catalog
 			.card__btn-1
-				a.card__btn-1-link(href="present_3.html") Подробнее
+				a.card__btn-1-link(href="{{item.href}}") Подробнее
