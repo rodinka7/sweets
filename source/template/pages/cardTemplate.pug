@@ -1,0 +1,65 @@
+.content.clearfix.increasePicture(ng-controller="cardController as cardList")
+	.sidebar
+		block sidebar
+			include ../common/_left_menu
+		block popular
+			include ../common/_popular
+	.main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="#!/index") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="{{cardList.item[0].href}}") {{cardList.item[0].header}}
+		.main__header
+			h2.main__header-top Новогодний подарок
+		.main__container
+			.card_present#card_present
+				.card__upper.clearfix
+					.card__pic_present
+						img.card__pic-img_present(src="{{cardList.item[0].src}}")
+						.card__btn_present(ng-click="cardList.showPicture()")
+							img.card__btn-img(src="assets/img/10.png")
+					.card__info_present
+						.card__header_present {{cardList.item[0].header}}
+						table.card__table
+							tr.card__row
+								td Цена
+								td
+									span {{cardList.item[0].price}} грн
+							tr
+								td Артикул
+								td {{cardList.item[0].art}}
+							tr.card__row
+								td Вес
+								td {{cardList.item[0].weight}} г
+							tr
+								td Производитель
+								td {{cardList.item[0].producer}}
+							tr
+								td Кол-во конфет 
+								td {{cardList.item[0].countCandies}} штук
+				.card__menu
+					ul.card__menu-list
+						li.card__menu-item
+							a.card__menu-link(href="" ng-click="cardList.showInfo($event)") Описание
+						li.card__menu-item
+							a.card__menu-link(href="" ng-click="cardList.showConsist($event)") Состав
+				.card__main
+					.card__main-inner(ng-show="cardList.toggle")
+						.card__text_present {{cardList.item[0].info}}
+					.card__main-inner(ng-show="!cardList.toggle")
+						table.card__main-table
+							tr
+								th Изображение
+								th Описание
+								th Количество, шт
+							tr(ng-repeat="jtem in cardList.item[0].candies")
+								td.candy
+									img.card__main-img(src="{{jtem.src}}")
+									.candy__show
+										img.candy__show-img(src="{{jtem.src}}")
+								td
+									.card__main-td-header {{jtem.name}}
+									.card__main-td-info {{jtem.info}}
+								td {{jtem.count}}

@@ -1,0 +1,24 @@
+.content#content__main.clearfix
+	.sidebar
+		block sidebar
+			include ../common/_left_menu
+		block popular
+			include ../common/_popular
+	.main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="index.html") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="price.html") Прайс
+
+		.main__header
+			h1.main__header-top Наш прайс
+		.main__container
+			.card_about
+				.card__text-1 На данной странице Вы можете скачать файл с прайсом нашей компании. В документе представлены актуальные цены, а также наличие сладких новогодних подарков 2017. 
+				.card__text-1 Для того, чтобы заказть сладкие новогодние подарки оптом или врозницу, Вы можете отправить сообщение с нашего сайта со <a href="contacts.html">страницы</a> или позвонить по телефону <b>+38(097)0671887</b>, и Вас проконсультируют по всем возникшим вопросам. 
+				.card__item_agreement Скачайте прайс-лист нашей компании: 
+				a.card__link_agreement(href='assets/img/price.docx').clearfix
+					img.card__img_agreement(src='assets/img/16.png')
+				a.card_about__link(href="catalog.html") Продолжить &gt;

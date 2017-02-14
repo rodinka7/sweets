@@ -248,12 +248,7 @@
 		position: relative;
 
 		&-inner {
-			position: absolute;
-			top: 0;
-			left: 0;
-			
 			width: 100%;
-			display: none;
 		}
 		&-table {
 			width: 100%;
@@ -332,20 +327,6 @@
 	}
 	/* Основная часть */
 }
-
-/* Переключение вкладок */
-.activeAdminSection{
-	background: rgba(255, 255, 255, 0.5);
-	
-	display: block;
-}
-.activeAdminItem{
-	background:#ffffff;	
-}
-.activeAdminLink{
-	color:#00bfa5;
-}
-/* Переключение вкладок */
 
 /* Увеличенные конфеты */
 .candy {
@@ -436,6 +417,7 @@
 		border-radius: 25%;
 
 		transform: rotate(45deg);
+		
 	}
 	span {
 		display: block;
@@ -447,6 +429,7 @@
 		border-radius: 25%;
 
 		transform: rotate(-45deg);
+		
 	}
 }
 /* Увеличенные конфеты */

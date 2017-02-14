@@ -1,7 +1,6 @@
 .content {
 	
 	width:80%;
-
 	margin:auto;
 	
 	background: #F9F8EE;
@@ -77,8 +76,7 @@
 			padding: 0;
 
 			border-bottom: 1px solid rgba(0,0,0,.5);
-			box-shadow: 1px 1px 1px 1px #5b564d;
-			background: #b7ad98;
+			box-shadow: 0 1px 1px 1px #5b564d;
 		}
 		&_popular {
 			@extend .menu__list;
@@ -164,6 +162,7 @@
 		
 		@include box;
 		padding: 0 10px;
+		
 		&-top {
 			color: #947D5C;
 			font-style: italic;
@@ -182,8 +181,6 @@
 		flex-flow: row wrap;
 		justify-content: center;
 
-		display: none;
-
 		margin-bottom: 30px;
 
 		&-btn {
@@ -194,7 +191,24 @@
 				@extend .card__btn-1;
 				margin: auto;
 			}
+		}
+	}
+	
+	&__filter {
+		margin: 10px 35px;
+		&-select, &-input {
+			width: 45%;
+			padding: 5px;
 
+			border-radius: 10px;
+
+			border: none;
+			border: 1px solid #9f9f9f;
+
+			font-size: 12px;  
+		}
+		&-select {
+			float: right;
 		}
 	}
 }
@@ -221,7 +235,7 @@
 	}
 }
 
-#section2, #section3, #section4 {
+#section2, .section2 {
 	width: 100%;
 
 	display: flex;
@@ -230,6 +244,10 @@
 
 	display: none;
 }
-#showMore3, #showMore4 {
+
+.showItems {
+	display: flex;
+}
+.hideItems{
 	display: none;
 }

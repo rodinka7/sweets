@@ -1,11 +1,11 @@
-.card(ng-repeat="item in contentList.list")
+.card(ng-repeat="item in contentList.elit | filter: contentList.query | orderBy: contentList.orderProp")
 	.card__pic
 		img.card__pic-img(ng-src="{{item.src}}")
 	.card__info
 		.card__header {{item.header}}
-		.card__price {{item.price}}
-		.card__art {{item.art}}
-		.card__art {{item.weight}}
+		.card__price {{item.price}} грн
+		.card__art артикул {{item.art}}
+		.card__art {{item.weight}} г
 	.card__btn
 		.card__btn-1
 			a.card__btn-1-link(href="{{item.href}}") Подробнее

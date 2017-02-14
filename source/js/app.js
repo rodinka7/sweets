@@ -4,16 +4,11 @@
   var
   		slideText = require('./slideText'),
   		map = require('./map'),
-      card_menu = require('./card_menu'),
-      manu = require('./menu'),
-      height = require('./height'),
-      increase = require('./increase_pic'),
       arrow = require('./arrow'),
       sned = require('./send'),
-      showMore = require('./showMore'),
       sliderHeight = require('./sliderHeight'),
       sendPhone = require('./sendPhone'),
-      contentController = require('./contentController.js');
+      mainController = require('./mainController.js');
 
 
   function isCurrent(page) {
@@ -26,24 +21,14 @@
   
   slideText();
 
-  card_menu();
-  
-  manu();
-
-  height();
-
-  increase();
-
   arrow();
 
   sned();
-
-  showMore(); 
 
   sliderHeight();
 
   sendPhone();
 
-  contentController();
+  mainController();
   
 })();

@@ -1,0 +1,42 @@
+.content.clearfix
+	.sidebar
+		block sidebar
+			include ../common/_left_menu
+		block new
+			include ../common/_new
+	.main#content__main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="#!/index") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="#!/news") Новости
+
+		.main__header
+			h1.main__header-top Новости
+		.main__container
+			.news__wrapper
+				.news__header Как выбрать качественные шоколадные конфеты
+				.news__text Наверное, каждый, приходя в магазин, супермаркет или находясь на страницах интернет-магазина сладостей, задумывался, какие конфеты качественные, а какие – нет. И как выбрать именно качественный товар, который не навредил бы здоровью, при этом обладая превосходным вкусом. Как же это сделать?
+				.news__img-wrapper
+					img.news__img(src='assets/img/choco.jpg')
+				.news__btn-1
+					.card__btn-1
+						a.card__btn-1-link(href="#!/news_1") Подробнее
+			.news__wrapper
+				.news__header Шоколад и его история
+				.news__text Шоколад издревле был очень вкусным и востребованным напитком. С давних времен до современности этот продукт прошел долгий и тернистый путь. Если раньше отведать его могли только королевские особы и знатные вельможи, сейчас полакомиться им может каждый.
+				.news__img-wrapper
+					img.news__img(src='assets/img/choco1.jpg')
+				.news__btn-1
+					.card__btn-1
+						a.card__btn-1-link(href="#!/news_2") Подробнее
+			.news__wrapper
+				.news__header Идеи новогодних подарков 2017
+				.news__text Новый год на носу, а вы не знаете, что подарить родным, друзьям и коллегам. Наступающий год Огненного Петуха обещает быть позитивным и ярким, как и его символ. Поэтому на Новый год подарки надо выбирать соответствующие. Не бойтесь быть оригинальными, но при этом не забывайте про практичность.
+				.news__img-wrapper
+					img.news__img(src='assets/img/choco2.jpg')
+				.news__btn-1
+					.card__btn-1
+						a.card__btn-1-link(href="#!/news_3") Подробнее
+			

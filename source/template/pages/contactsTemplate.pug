@@ -1,0 +1,22 @@
+.content.clearfix
+	.sidebar
+		block sidebar
+			include ../common/_left_menu
+		block new
+			include ../common/_new
+	.main#content__main
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="#!/index") Главная
+				| &raquo;
+				span
+					a.main__up-link(href="#!/contacts") Контакты
+
+		.main__header
+			h1.main__header-top Контакты
+		.main__container
+			block card_contacts
+				include ../common/_card_contacts
+			block card_contacts
+				include ../common/_card_form
+				

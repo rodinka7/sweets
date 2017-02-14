@@ -5,9 +5,8 @@
 		li.menu__item
 			svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
 				polygon(points="0,0 8.7,5 0,10")
-			a.menu__link(href="index.html#category1") Новогодние подарки в дизайнерской упаковке
+			a.menu__link(href="#category1" ng-click="contentList.chooseElit($event)") Новогодние подарки в дизайнерской упаковке
 		li.menu__item
 			svg.svg-triangle(xmlns="http://www.w3.org/2000/svg" version="1.1")
 				polygon(points="0,0 8.7,5 0,10")
-			a.menu__link(href="index.html#category2") Новогодние подарки в стандартной упаковке
-	
+			a.menu__link(href="#category2" ng-click="contentList.chooseStandart($event)") Новогодние подарки в стандартной упаковке
