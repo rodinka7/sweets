@@ -2,11 +2,114 @@
 	width: 100%;
 	height: 100vh;
 
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 
 	background: rgba(0,0,0,.8);
 
-	overflow-y: hidden;
+	&__card {
+		background: #F9F8EE;
+		
+		width: 30%;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+
+		text-align: center;
+
+		border-radius: 10px;
+
+		&-header {
+			color: #ce0202;
+			font-style: italic;
+		}
+
+		&-label {
+			display: block;
+			width: 90%;
+			height: 5%;
+
+			margin: 5% auto;
+
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+				width: 8%;
+				height: 100%;
+
+				background: #ce0202;
+				border-radius: 10px 0 0 10px;
+			}
+		}
+
+		&-icon {
+			position: absolute;
+			top: 50%;
+			left: 2%;
+
+			transform: translateY(-50%);
+
+			color: #FFF;
+
+		}
+
+		&-input {
+			@include box;
+			width: 100%;
+
+			padding: 2% 10%;
+
+			border: none;
+			border-radius: 10px;
+
+			outline: none;
+
+			&:focus {
+				color: #FF0000;
+			}
+		}
+
+		&-footer {
+			background: #ce0202;
+			
+			border-radius: 0 0 10px 10px;
+
+			overflow: hidden;
+
+			&-btn {
+				width: 45%;
+				display: inline-block;
+
+				background: #ce0202;
+
+				padding: 3% 2%;
+				
+				color: #FFF;
+
+				cursor: pointer;
+
+				text-decoration: none;
+
+				&:first-child {
+					border-right: 1px solid gray;
+				}
+				&:hover {
+					color: #fce8e8;
+				} 
+			}
+		}
+	}
+	&__error {
+		color: #ce0202;
+		margin: 5%;
+	}
 }

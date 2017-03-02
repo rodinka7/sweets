@@ -1,0 +1,25 @@
+.content.clearfix#content__main(ng-controller="contentController as contentList")
+	.sidebar
+		block sidebar
+			include ../common/_left_menu		
+		block news
+			include ../common/_news
+	.main#main-page
+		.main__up
+			.main__up-header 
+				a.main__up-link(href="#!/changeGoods") Панель управления
+		.main__filter
+			input.main__filter-input(type="text" placeholder="Введите название" ng-model="contentList.query")
+			select.main__filter-select(ng-model="contentList.orderProp")
+				option(disabled) Отсортировать по
+				option(value="weight") Вес подарков
+				option(value="price") Стоимость
+		.main__header 
+			h1.main__header-top Новогодние подарки - Панель управления
+		.main__container
+			block card
+				include ../common/_cardChange
+			.card.card__addNew
+				.card__btn
+					.card__btn-1
+						a.card__btn-1-link(href="#!/addItem") Добавить

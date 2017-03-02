@@ -1,1 +1,14 @@
-.auth
+.auth(ng-controller="authController as auth")
+	.auth__card
+		.auth__card-header 
+			h1 Авторизация
+		form.auth__card-form
+			label.auth__card-label
+				<i class="fa fa-thumbs-o-up auth__card-icon" aria-hidden="true"></i>
+				input.auth__card-input(type="text" placeholder="Введите логин" ng-model="auth.login")
+			label.auth__card-label
+				<i class="fa fa-key auth__card-icon" aria-hidden="true"></i>
+				input.auth__card-input(type="password" placeholder="Введите пароль" ng-model="auth.password")
+			.auth__card-footer
+				a.auth__card-footer-btn(href="#!/changeGoods" ng-click="auth.logIn($event)") Войти
+				a.auth__card-footer-btn(href="#!/index") На главную
